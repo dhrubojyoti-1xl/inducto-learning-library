@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Build intermediates — the shipped artefacts live in output/ and site/
+preview/
+*.log
+
+# Never commit secrets
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+
+# Large intermediates and duplicates of output/
+inducto-learning-library.zip
+pptx_inventory.json
+proposed_links.json
+swapvideos.json
+newvideos.json

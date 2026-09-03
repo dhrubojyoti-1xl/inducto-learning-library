@@ -1,0 +1,22 @@
+{
+  "stats": {
+    "html_pages": 41,
+    "internal_links": 1133,
+    "modules": 39,
+    "source_strings_checked": 7127,
+    "source_strings_missing": 0,
+    "videos_in_source": 39,
+    "videos_embedded": 39,
+    "images_referenced": 18,
+    "progress_stores": 1,
+    "company_input_tokens": 55,
+    "company_input_distinct": 14,
+    "search_rows": 1162,
+    "glossary_terms": 148,
+    "assessment_pool": 39,
+    "external_urls": 84,
+    "external_urls_checked": 84
+  },
+  "fails": [],
+  "warns": []
+}

@@ -1,0 +1,1335 @@
+{
+  "library": "Inducto Learning & Knowledge Library",
+  "deck_count": 40,
+  "decks": [
+    {
+      "module_code": "AI-01",
+      "title": "AI Fundamentals",
+      "area": "01-ai-general",
+      "area_name": "AI Courses",
+      "file": "output/01-ai-general/01-01-ai-fundamentals.pptx",
+      "slide_count": 52,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 15,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 12,
+        "scenario_decisions": 1,
+        "total": 36
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=SAaDOUhrdXc",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "The 7-Minute Guide to Understanding Artificial Intelligence",
+        "channel": "Windows Developer",
+        "duration": "7:13",
+        "url": "https://www.youtube.com/watch?v=SAaDOUhrdXc"
+      },
+      "company_input_needed": [
+        "[COMPANY INPUT NEEDED: name of the approved AI assistant]"
+      ]
+    },
+    {
+      "module_code": "AI-02",
+      "title": "Generative AI",
+      "area": "01-ai-general",
+      "area_name": "AI Courses",
+      "file": "output/01-ai-general/01-02-generative-ai.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 2,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 37
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=hfIUstzHs9A",
+        "https://chatgpt.com",
+        "https://copilot.microsoft.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "What are Generative AI models?",
+        "channel": "IBM Technology",
+        "duration": "8:47",
+        "url": "https://www.youtube.com/watch?v=hfIUstzHs9A"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "AI-03",
+      "title": "AI Capabilities",
+      "area": "01-ai-general",
+      "area_name": "AI Courses",
+      "file": "output/01-ai-general/01-03-ai-capabilities.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 11,
+        "scenario_decisions": 1,
+        "total": 34
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=mWRe8w6YjO0",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "7 Life-Changing Uses of AI I Wish I Knew Earlier",
+        "channel": "Kevin Stratvert",
+        "duration": "14:29",
+        "url": "https://www.youtube.com/watch?v=mWRe8w6YjO0"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "AI-04",
+      "title": "AI Limitations",
+      "area": "01-ai-general",
+      "area_name": "AI Courses",
+      "file": "output/01-ai-general/01-04-ai-limitations.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 2,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 37
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=CB7NNsI27ks",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Can AI Think? Debunking AI Limitations",
+        "channel": "IBM Technology",
+        "duration": "9:01",
+        "url": "https://www.youtube.com/watch?v=CB7NNsI27ks"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "AI-05",
+      "title": "Hallucinations & Fact-Checking",
+      "area": "01-ai-general",
+      "area_name": "AI Courses",
+      "file": "output/01-ai-general/01-05-hallucinations-fact-checking.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 37
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=ZFKvTIADp0k",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Tuning Your AI Model to Reduce Hallucinations",
+        "channel": "IBM Technology",
+        "duration": "8:54",
+        "url": "https://www.youtube.com/watch?v=ZFKvTIADp0k"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "DW-01",
+      "title": "Email Writing with AI",
+      "area": "02-ai-daily-work",
+      "area_name": "AI for Day-to-Day Work",
+      "file": "output/02-ai-daily-work/02-01-email-writing-with-ai.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 4,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 39
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=bCvWzct5SCc",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Write Better Emails to Your Boss with AI",
+        "channel": "w/KMo",
+        "duration": "5:51",
+        "url": "https://www.youtube.com/watch?v=bCvWzct5SCc"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "DW-02",
+      "title": "Research with AI",
+      "area": "02-ai-daily-work",
+      "area_name": "AI for Day-to-Day Work",
+      "file": "output/02-ai-daily-work/02-02-research-with-ai.pptx",
+      "slide_count": 50,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 13,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 37
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=ld3XMuXwLcE",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "How to Use ChatGPT’s Deep Research to Save HOURS on Research",
+        "channel": "Andy Stapleton",
+        "duration": "13:59",
+        "url": "https://www.youtube.com/watch?v=ld3XMuXwLcE"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "DW-03",
+      "title": "Report Preparation with AI",
+      "area": "02-ai-daily-work",
+      "area_name": "AI for Day-to-Day Work",
+      "file": "output/02-ai-daily-work/02-03-report-preparation-with-ai.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 4,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 38
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=1QY5HtuvTaw",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "📑 Effortless report writing with AI! 🚀",
+        "channel": "Astranti",
+        "duration": "9:17",
+        "url": "https://www.youtube.com/watch?v=1QY5HtuvTaw"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "DW-04",
+      "title": "Data Analysis with AI",
+      "area": "02-ai-daily-work",
+      "area_name": "AI for Day-to-Day Work",
+      "file": "output/02-ai-daily-work/02-04-data-analysis-with-ai.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 38
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=FKLr3ft8ea0",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Master Data Analysis with ChatGPT (in just 12 minutes)",
+        "channel": "Jeff Su",
+        "duration": "11:54",
+        "url": "https://www.youtube.com/watch?v=FKLr3ft8ea0"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "DW-05",
+      "title": "Excel with AI",
+      "area": "02-ai-daily-work",
+      "area_name": "AI for Day-to-Day Work",
+      "file": "output/02-ai-daily-work/02-05-excel-with-ai.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 19,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 4,
+        "checklist_items": 11,
+        "scenario_decisions": 1,
+        "total": 35
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=Rj7yrivdPbc",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Excel Tutorial for Beginners — Learn with Copilot AI (Free Tool!)",
+        "channel": "Kevin Stratvert",
+        "duration": "7:35",
+        "url": "https://www.youtube.com/watch?v=Rj7yrivdPbc"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "DW-06",
+      "title": "Presentations with AI",
+      "area": "02-ai-daily-work",
+      "area_name": "AI for Day-to-Day Work",
+      "file": "output/02-ai-daily-work/02-06-presentations-with-ai.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 5,
+        "checklist_items": 11,
+        "scenario_decisions": 1,
+        "total": 36
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=ZpXN9M0WLQ4",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "The Top 1% Build AI Presentations Differently. Here's How.",
+        "channel": "Jeff Su",
+        "duration": "12:52",
+        "url": "https://www.youtube.com/watch?v=ZpXN9M0WLQ4"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "DW-07",
+      "title": "Documentation with AI",
+      "area": "02-ai-daily-work",
+      "area_name": "AI for Day-to-Day Work",
+      "file": "output/02-ai-daily-work/02-07-documentation-with-ai.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 4,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 39
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=xPAQEEYzOH0",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "How to Write SOPs With AI that ACTUALLY Work",
+        "channel": "Layla at ProcessDriven",
+        "duration": "5:16",
+        "url": "https://www.youtube.com/watch?v=xPAQEEYzOH0"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "DW-08",
+      "title": "Meeting Notes & Follow-ups",
+      "area": "02-ai-daily-work",
+      "area_name": "AI for Day-to-Day Work",
+      "file": "output/02-ai-daily-work/02-08-meeting-notes-and-followups.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 4,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 39
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=56pilLKRGJc",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "How to Use ChatGPT for Meeting Minutes in 2025",
+        "channel": "Tactiq",
+        "duration": "4:24",
+        "url": "https://www.youtube.com/watch?v=56pilLKRGJc"
+      },
+      "company_input_needed": [
+        "[COMPANY INPUT NEEDED: who approves meeting recordings]"
+      ]
+    },
+    {
+      "module_code": "DW-09",
+      "title": "Brainstorming with AI",
+      "area": "02-ai-daily-work",
+      "area_name": "AI for Day-to-Day Work",
+      "file": "output/02-ai-daily-work/02-09-brainstorming-with-ai.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 16,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 4,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 39
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=LuHx6KdQPHQ",
+        "https://chatgpt.com",
+        "https://copilot.microsoft.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "3 Ways to Brainstorm ANYTHING in ChatGPT! (+ Free Prompt!)",
+        "channel": "AI Foundations",
+        "duration": "12:43",
+        "url": "https://www.youtube.com/watch?v=LuHx6KdQPHQ"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "DW-10",
+      "title": "Planning with AI",
+      "area": "02-ai-daily-work",
+      "area_name": "AI for Day-to-Day Work",
+      "file": "output/02-ai-daily-work/02-10-planning-and-productivity-with-ai.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 16,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 4,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 39
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=EG4rVXK3XQU",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "How to Plan Your Entire Week in 5 Minutes Using ChatGPT",
+        "channel": "Del Denney",
+        "duration": "6:22",
+        "url": "https://www.youtube.com/watch?v=EG4rVXK3XQU"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "DW-11",
+      "title": "Automation Basics",
+      "area": "02-ai-daily-work",
+      "area_name": "AI for Day-to-Day Work",
+      "file": "output/02-ai-daily-work/02-11-automation-basics.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 17,
+        "scenario_decisions": 1,
+        "total": 40
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=dFSnam97YbQ",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "From Idea to AI: Building Applications with Generative AI",
+        "channel": "IBM Technology",
+        "duration": "7:12",
+        "url": "https://www.youtube.com/watch?v=dFSnam97YbQ"
+      },
+      "company_input_needed": [
+        "[COMPANY INPUT NEEDED: who handles automation requests]"
+      ]
+    },
+    {
+      "module_code": "INDEX",
+      "title": "Inducto Learning Library",
+      "area": "index",
+      "area_name": "Master index",
+      "file": "output/00-master-index.pptx",
+      "slide_count": 12,
+      "hidden_slides": 0,
+      "duration_min": 5,
+      "audience": "Everybody",
+      "is_index": true,
+      "content_points": null,
+      "external_links": [],
+      "deck_links": [
+        "01-ai-general/01-01-ai-fundamentals.pptx",
+        "01-ai-general/01-02-generative-ai.pptx",
+        "01-ai-general/01-03-ai-capabilities.pptx",
+        "01-ai-general/01-04-ai-limitations.pptx",
+        "01-ai-general/01-05-hallucinations-fact-checking.pptx",
+        "02-ai-daily-work/02-01-email-writing-with-ai.pptx",
+        "02-ai-daily-work/02-02-research-with-ai.pptx",
+        "02-ai-daily-work/02-03-report-preparation-with-ai.pptx",
+        "02-ai-daily-work/02-04-data-analysis-with-ai.pptx",
+        "02-ai-daily-work/02-05-excel-with-ai.pptx",
+        "02-ai-daily-work/02-06-presentations-with-ai.pptx",
+        "02-ai-daily-work/02-07-documentation-with-ai.pptx",
+        "02-ai-daily-work/02-08-meeting-notes-and-followups.pptx",
+        "02-ai-daily-work/02-09-brainstorming-with-ai.pptx",
+        "02-ai-daily-work/02-10-planning-and-productivity-with-ai.pptx",
+        "02-ai-daily-work/02-11-automation-basics.pptx",
+        "03-prompt-engineering/03-01-basic-prompting.pptx",
+        "03-prompt-engineering/03-02-instructions-and-context.pptx",
+        "03-prompt-engineering/03-03-role-based-prompts.pptx",
+        "03-prompt-engineering/03-04-examples-and-structured-prompts.pptx",
+        "03-prompt-engineering/03-05-advanced-prompting.pptx",
+        "03-prompt-engineering/03-06-reusable-prompts.pptx",
+        "03-prompt-engineering/03-07-evaluating-ai-responses.pptx",
+        "04-professional-skills/04-01-business-communication.pptx",
+        "04-professional-skills/04-02-professional-email-writing.pptx",
+        "04-professional-skills/04-03-english-and-grammar.pptx",
+        "04-professional-skills/04-04-time-management.pptx",
+        "04-professional-skills/04-05-personal-productivity-systems.pptx",
+        "04-professional-skills/04-06-problem-solving.pptx",
+        "04-professional-skills/04-07-critical-thinking.pptx",
+        "04-professional-skills/04-08-presentation-skills.pptx",
+        "04-professional-skills/04-09-teamwork-and-collaboration.pptx",
+        "05-security-privacy/05-01-password-security.pptx",
+        "05-security-privacy/05-02-phishing-and-social-engineering.pptx",
+        "05-security-privacy/05-03-multi-factor-authentication.pptx",
+        "05-security-privacy/05-04-data-protection-basics.pptx",
+        "05-security-privacy/05-05-handling-confidential-information.pptx",
+        "05-security-privacy/05-06-safe-use-of-ai-at-work.pptx",
+        "05-security-privacy/05-07-never-paste-into-ai.pptx"
+      ],
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PE-01",
+      "title": "Basic Prompting",
+      "area": "03-prompt-engineering",
+      "area_name": "Prompt Engineering",
+      "file": "output/03-prompt-engineering/03-01-basic-prompting.pptx",
+      "slide_count": 52,
+      "hidden_slides": 24,
+      "duration_min": 20,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 15,
+        "quiz_items": 5,
+        "copy_paste_templates": 5,
+        "checklist_items": 13,
+        "scenario_decisions": 1,
+        "total": 39
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=kOs8H4j0cFg",
+        "https://chatgpt.com",
+        "https://copilot.microsoft.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Master Prompt Engineering in 5 Minutes! (Copy This Formula)",
+        "channel": "Prof. Ryan Ahmed",
+        "duration": "4:30",
+        "url": "https://www.youtube.com/watch?v=kOs8H4j0cFg"
+      },
+      "company_input_needed": [
+        "[COMPANY INPUT NEEDED: where the shared prompt library lives]"
+      ]
+    },
+    {
+      "module_code": "PE-02",
+      "title": "Instructions & Context",
+      "area": "03-prompt-engineering",
+      "area_name": "Prompt Engineering",
+      "file": "output/03-prompt-engineering/03-02-instructions-and-context.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 38
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=LrclePP0KRk",
+        "https://chatgpt.com",
+        "https://copilot.microsoft.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Your AI Prompt is Missing These 3 Things (ChatGPT & Gemini)",
+        "channel": "Simpletivity",
+        "duration": "5:54",
+        "url": "https://www.youtube.com/watch?v=LrclePP0KRk"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PE-03",
+      "title": "Role-Based Prompts",
+      "area": "03-prompt-engineering",
+      "area_name": "Prompt Engineering",
+      "file": "output/03-prompt-engineering/03-03-role-based-prompts.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 16,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 10,
+        "scenario_decisions": 1,
+        "total": 33
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=Gd2N8bCKO98",
+        "https://chatgpt.com",
+        "https://copilot.microsoft.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Role and Persona-Based Prompting",
+        "channel": "AppDirect",
+        "duration": "3:49",
+        "url": "https://www.youtube.com/watch?v=Gd2N8bCKO98"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PE-04",
+      "title": "Examples & Structured Prompts",
+      "area": "03-prompt-engineering",
+      "area_name": "Prompt Engineering",
+      "file": "output/03-prompt-engineering/03-04-examples-and-structured-prompts.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 4,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 39
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=9qdgEBVkWR4",
+        "https://chatgpt.com",
+        "https://copilot.microsoft.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Discover Few-Shot Prompting | Google AI Essentials",
+        "channel": "Grow with Google",
+        "duration": "4:31",
+        "url": "https://www.youtube.com/watch?v=9qdgEBVkWR4"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PE-05",
+      "title": "Advanced Prompting",
+      "area": "03-prompt-engineering",
+      "area_name": "Prompt Engineering",
+      "file": "output/03-prompt-engineering/03-05-advanced-prompting.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 20,
+      "audience": "Staff who already prompt daily",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 17,
+        "scenario_decisions": 1,
+        "total": 40
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=1c9iyoVIwDs",
+        "https://chatgpt.com",
+        "https://copilot.microsoft.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "4 Methods of Prompt Engineering",
+        "channel": "IBM Technology",
+        "duration": "12:41",
+        "url": "https://www.youtube.com/watch?v=1c9iyoVIwDs"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PE-06",
+      "title": "Reusable Prompts",
+      "area": "03-prompt-engineering",
+      "area_name": "Prompt Engineering",
+      "file": "output/03-prompt-engineering/03-06-reusable-prompts.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 38
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=f3IeLIT_HRc",
+        "https://chatgpt.com",
+        "https://copilot.microsoft.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Why You Need an AI Prompt Library Now & How to Build One",
+        "channel": "Marketing Explained",
+        "duration": "8:17",
+        "url": "https://www.youtube.com/watch?v=f3IeLIT_HRc"
+      },
+      "company_input_needed": [
+        "[COMPANY INPUT NEEDED: shared location]"
+      ]
+    },
+    {
+      "module_code": "PE-07",
+      "title": "Evaluating AI Responses",
+      "area": "03-prompt-engineering",
+      "area_name": "Prompt Engineering",
+      "file": "output/03-prompt-engineering/03-07-evaluating-ai-responses.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 37
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=gQx973zsOOw",
+        "https://chatgpt.com",
+        "https://copilot.microsoft.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Evaluating GenAI Output",
+        "channel": "UBC LEARN",
+        "duration": "6:32",
+        "url": "https://www.youtube.com/watch?v=gQx973zsOOw"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PS-01",
+      "title": "Business Communication",
+      "area": "04-professional-skills",
+      "area_name": "Professional Skills",
+      "file": "output/04-professional-skills/04-01-business-communication.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 37
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=LBNF6l2n3YM",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "How to Write Email with Military Precision",
+        "channel": "Harvard Business Review",
+        "duration": "4:02",
+        "url": "https://www.youtube.com/watch?v=LBNF6l2n3YM"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PS-02",
+      "title": "Professional Email Writing",
+      "area": "04-professional-skills",
+      "area_name": "Professional Skills",
+      "file": "output/04-professional-skills/04-02-professional-email-writing.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 37
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=1XctnF7C74s",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "8 Email Etiquette Tips - How to Write Better Emails at Work",
+        "channel": "Harvard Business Review",
+        "duration": "7:00",
+        "url": "https://www.youtube.com/watch?v=1XctnF7C74s"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PS-03",
+      "title": "English for the Workplace",
+      "area": "04-professional-skills",
+      "area_name": "Professional Skills",
+      "file": "output/04-professional-skills/04-03-english-and-grammar.pptx",
+      "slide_count": 50,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 13,
+        "quiz_items": 5,
+        "copy_paste_templates": 2,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 35
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=QNZ8uty99Fc",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Can You Correct the Mistakes in These Business Emails?",
+        "channel": "Derek Callan - English for Professionals",
+        "duration": "9:40",
+        "url": "https://www.youtube.com/watch?v=QNZ8uty99Fc"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PS-04",
+      "title": "Time Management",
+      "area": "04-professional-skills",
+      "area_name": "Professional Skills",
+      "file": "output/04-professional-skills/04-04-time-management.pptx",
+      "slide_count": 50,
+      "hidden_slides": 24,
+      "duration_min": 16,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 13,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 36
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=A895Mu8GcGw",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Master Your Minutes - Time Management Hacks (3 Minutes)",
+        "channel": "BioTech Whisperer",
+        "duration": "3:00",
+        "url": "https://www.youtube.com/watch?v=A895Mu8GcGw"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PS-05",
+      "title": "Productivity Systems",
+      "area": "04-professional-skills",
+      "area_name": "Professional Skills",
+      "file": "output/04-professional-skills/04-05-personal-productivity-systems.pptx",
+      "slide_count": 50,
+      "hidden_slides": 24,
+      "duration_min": 16,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 13,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 36
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=7M6bIeVbCqA",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "My Simple Productivity System (for normal people)!",
+        "channel": "Jeff Su",
+        "duration": "7:04",
+        "url": "https://www.youtube.com/watch?v=7M6bIeVbCqA"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PS-06",
+      "title": "Problem-Solving",
+      "area": "04-professional-skills",
+      "area_name": "Professional Skills",
+      "file": "output/04-professional-skills/04-06-problem-solving.pptx",
+      "slide_count": 50,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 13,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 11,
+        "scenario_decisions": 1,
+        "total": 33
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=t7FcK8jV2yA",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "The 5 Whys Explained - Root Cause Analysis",
+        "channel": "EPM",
+        "duration": "8:25",
+        "url": "https://www.youtube.com/watch?v=t7FcK8jV2yA"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PS-07",
+      "title": "Critical Thinking",
+      "area": "04-professional-skills",
+      "area_name": "Professional Skills",
+      "file": "output/04-professional-skills/04-07-critical-thinking.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 37
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=BtqOeXsB36U",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Improve your critical thinking skills in just 6 minutes | Alex Edmans for Big Think+",
+        "channel": "Big Think",
+        "duration": "6:12",
+        "url": "https://www.youtube.com/watch?v=BtqOeXsB36U"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PS-08",
+      "title": "Presentation Skills",
+      "area": "04-professional-skills",
+      "area_name": "Professional Skills",
+      "file": "output/04-professional-skills/04-08-presentation-skills.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 38
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=PnWND7JpRDQ",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "How to Prepare a Presentation with the Correct Structure",
+        "channel": "Carl Kwan",
+        "duration": "4:48",
+        "url": "https://www.youtube.com/watch?v=PnWND7JpRDQ"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "PS-09",
+      "title": "Teamwork & Collaboration",
+      "area": "04-professional-skills",
+      "area_name": "Professional Skills",
+      "file": "output/04-professional-skills/04-09-teamwork-and-collaboration.pptx",
+      "slide_count": 50,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "New joiners + staff",
+      "content_points": {
+        "teachable_slides": 13,
+        "quiz_items": 5,
+        "copy_paste_templates": 4,
+        "checklist_items": 11,
+        "scenario_decisions": 1,
+        "total": 34
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=RQmUJZvrthE",
+        "https://copilot.microsoft.com",
+        "https://chatgpt.com",
+        "https://gemini.google.com"
+      ],
+      "video": {
+        "title": "Mastering Task Delegation - A Guide to Effective Teamwork (15 Minutes)",
+        "channel": "Microlearning Daily",
+        "duration": "15:00",
+        "url": "https://www.youtube.com/watch?v=RQmUJZvrthE"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "SEC-01",
+      "title": "Password Security",
+      "area": "05-security-privacy",
+      "area_name": "Security & Data Privacy",
+      "file": "output/05-security-privacy/05-01-password-security.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 16,
+      "audience": "Mandatory for all staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 1,
+        "checklist_items": 19,
+        "scenario_decisions": 1,
+        "total": 40
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=xUp5S0nBnfc",
+        "https://haveibeenpwned.com",
+        "https://www.meity.gov.in/data-protection-framework",
+        "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws"
+      ],
+      "video": {
+        "title": "How to make passwords more secure",
+        "channel": "IBM Technology",
+        "duration": "2:56",
+        "url": "https://www.youtube.com/watch?v=xUp5S0nBnfc"
+      },
+      "company_input_needed": [
+        "[COMPANY INPUT NEEDED: approved password manager]",
+        "[COMPANY INPUT NEEDED: who to report a security concern to]"
+      ]
+    },
+    {
+      "module_code": "SEC-02",
+      "title": "Phishing & Social Engineering",
+      "area": "05-security-privacy",
+      "area_name": "Security & Data Privacy",
+      "file": "output/05-security-privacy/05-02-phishing-and-social-engineering.pptx",
+      "slide_count": 50,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "Mandatory for all staff",
+      "content_points": {
+        "teachable_slides": 13,
+        "quiz_items": 5,
+        "copy_paste_templates": 2,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 35
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=UuLjQ-LWM9Y",
+        "https://haveibeenpwned.com",
+        "https://www.meity.gov.in/data-protection-framework",
+        "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws"
+      ],
+      "video": {
+        "title": "How to Spot Phishing Emails | Cyber Security Awareness for Employees",
+        "channel": "UK Cyber Hub",
+        "duration": "8:51",
+        "url": "https://www.youtube.com/watch?v=UuLjQ-LWM9Y"
+      },
+      "company_input_needed": [
+        "[COMPANY INPUT NEEDED: who to report a security concern to]"
+      ]
+    },
+    {
+      "module_code": "SEC-03",
+      "title": "Multi-Factor Authentication",
+      "area": "05-security-privacy",
+      "area_name": "Security & Data Privacy",
+      "file": "output/05-security-privacy/05-03-multi-factor-authentication.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 15,
+      "audience": "Mandatory for all staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 17,
+        "scenario_decisions": 1,
+        "total": 40
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=L3alw3iXaio",
+        "https://haveibeenpwned.com",
+        "https://www.meity.gov.in/data-protection-framework",
+        "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws"
+      ],
+      "video": {
+        "title": "What is Multi-Factor Authentication",
+        "channel": "IBM Technology",
+        "duration": "3:02",
+        "url": "https://www.youtube.com/watch?v=L3alw3iXaio"
+      },
+      "company_input_needed": [
+        "[COMPANY INPUT NEEDED: IT service desk route]"
+      ]
+    },
+    {
+      "module_code": "SEC-04",
+      "title": "Data Protection Basics",
+      "area": "05-security-privacy",
+      "area_name": "Security & Data Privacy",
+      "file": "output/05-security-privacy/05-04-data-protection-basics.pptx",
+      "slide_count": 50,
+      "hidden_slides": 24,
+      "duration_min": 18,
+      "audience": "Mandatory for all staff",
+      "content_points": {
+        "teachable_slides": 13,
+        "quiz_items": 5,
+        "copy_paste_templates": 2,
+        "checklist_items": 18,
+        "scenario_decisions": 1,
+        "total": 39
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=YJInlE99vSs",
+        "https://www.meity.gov.in/data-protection-framework",
+        "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws",
+        "https://haveibeenpwned.com"
+      ],
+      "video": {
+        "title": "Data protection explained in three minutes",
+        "channel": "Information Commissioner's Office (ICO)",
+        "duration": "2:54",
+        "url": "https://www.youtube.com/watch?v=YJInlE99vSs"
+      },
+      "company_input_needed": [
+        "[COMPANY INPUT NEEDED: who handles data requests]"
+      ]
+    },
+    {
+      "module_code": "SEC-05",
+      "title": "Handling Confidential Information",
+      "area": "05-security-privacy",
+      "area_name": "Security & Data Privacy",
+      "file": "output/05-security-privacy/05-05-handling-confidential-information.pptx",
+      "slide_count": 50,
+      "hidden_slides": 24,
+      "duration_min": 16,
+      "audience": "Mandatory for all staff",
+      "content_points": {
+        "teachable_slides": 13,
+        "quiz_items": 5,
+        "copy_paste_templates": 3,
+        "checklist_items": 15,
+        "scenario_decisions": 1,
+        "total": 37
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=gquCNKKhJE0",
+        "https://www.meity.gov.in/data-protection-framework",
+        "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws",
+        "https://haveibeenpwned.com"
+      ],
+      "video": {
+        "title": "Data Protection: Data Classification: Public, Internal, Confidential and Restricted - Lesson 4",
+        "channel": "Experts Academy",
+        "duration": "3:32",
+        "url": "https://www.youtube.com/watch?v=gquCNKKhJE0"
+      },
+      "company_input_needed": []
+    },
+    {
+      "module_code": "SEC-06",
+      "title": "Safe Use of AI at Work",
+      "area": "05-security-privacy",
+      "area_name": "Security & Data Privacy",
+      "file": "output/05-security-privacy/05-06-safe-use-of-ai-at-work.pptx",
+      "slide_count": 50,
+      "hidden_slides": 24,
+      "duration_min": 17,
+      "audience": "Mandatory for all staff",
+      "content_points": {
+        "teachable_slides": 13,
+        "quiz_items": 5,
+        "copy_paste_templates": 2,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 35
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=pR7FfNWjEe8",
+        "https://www.meity.gov.in/data-protection-framework",
+        "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws",
+        "https://haveibeenpwned.com"
+      ],
+      "video": {
+        "title": "How to Secure AI Business Models",
+        "channel": "IBM Technology",
+        "duration": "13:13",
+        "url": "https://www.youtube.com/watch?v=pR7FfNWjEe8"
+      },
+      "company_input_needed": [
+        "[COMPANY INPUT NEEDED: approved AI tool]"
+      ]
+    },
+    {
+      "module_code": "SEC-07",
+      "title": "What Never to Paste Into AI",
+      "area": "05-security-privacy",
+      "area_name": "Security & Data Privacy",
+      "file": "output/05-security-privacy/05-07-never-paste-into-ai.pptx",
+      "slide_count": 51,
+      "hidden_slides": 24,
+      "duration_min": 16,
+      "audience": "Mandatory for all staff",
+      "content_points": {
+        "teachable_slides": 14,
+        "quiz_items": 5,
+        "copy_paste_templates": 2,
+        "checklist_items": 14,
+        "scenario_decisions": 1,
+        "total": 36
+      },
+      "external_links": [
+        "https://www.youtube.com/watch?v=57wFvOqzBvg",
+        "https://www.meity.gov.in/data-protection-framework",
+        "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws",
+        "https://haveibeenpwned.com"
+      ],
+      "video": {
+        "title": "Don’t share your SECRETS with ChatGPT, protect your PRIVACY",
+        "channel": "David Bombal",
+        "duration": "7:17",
+        "url": "https://www.youtube.com/watch?v=57wFvOqzBvg"
+      },
+      "company_input_needed": [
+        "[COMPANY INPUT NEEDED: name of the approved AI tool]",
+        "[COMPANY INPUT NEEDED: who to report a data incident to]",
+        "[COMPANY INPUT NEEDED: the company's stated position on reporting your own mistake]"
+      ]
+    }
+  ]
+}
