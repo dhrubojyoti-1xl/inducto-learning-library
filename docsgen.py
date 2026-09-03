@@ -444,7 +444,12 @@ def main():
         "- Heading order verified by gate 3.",
         "- Every interactive control is a real `button` or `a`, reachable by "
         "keyboard, with a visible `:focus-visible` ring.",
-        "- Targets are at least 44px tall (buttons, options, checklist rows).",
+        "- Target sizes measured in the browser on the deployed page: primary "
+        "buttons, quiz options and checklist rows are 44px or taller; the "
+        "small secondary buttons are 36px and the section-rail links 41px. "
+        "Every non-inline target clears the 24px WCAG 2.2 minimum. Inline "
+        "links inside a line of text (the breadcrumb) are exempt under that "
+        "rule.",
         "- Quiz and scenario feedback is announced through a polite live "
         "region (`#live`).",
         "- Progress bars carry `role=\"progressbar\"` with a live "

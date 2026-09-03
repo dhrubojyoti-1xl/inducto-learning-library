@@ -723,10 +723,14 @@ def build_data(decks, sect_counts):
         })
         search.append({"k": "module", "t": d["title"], "s": first_sentence(d["subtitle"]),
                        "m": code, "h": href})
+        # Only the first slide of a section carries an anchor, so carry the
+        # current one forward: every lesson must link to its own section.
+        anchor = "why"
         for s in d["slides"]:
+            anchor = s.get("anchor") or anchor
             search.append({"k": "lesson", "t": s["title"],
                            "s": first_sentence(s.get("lead") or "", 110),
-                           "m": code, "h": href + "#" + (s.get("anchor") or "why")})
+                           "m": code, "h": href + "#" + anchor})
         for t, dfn in d["glossary"]:
             search.append({"k": "term", "t": t, "s": first_sentence(dfn, 110),
                            "m": code, "h": href + "#glossary"})
