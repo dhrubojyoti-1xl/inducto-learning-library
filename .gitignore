@@ -19,3 +19,6 @@ pptx_inventory.json
 proposed_links.json
 swapvideos.json
 newvideos.json
+blueprint_refs.json
+docs/_preview/
+docs/_*.pdf
