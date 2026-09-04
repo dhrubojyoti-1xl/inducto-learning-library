@@ -388,7 +388,8 @@ DECK = {
             "q": "Why are the answers different?",
             "stem": "You and a colleague type the same question into the same "
                     "tool a minute apart, and get different wording back.",
-            "remember": "Nothing is retrieved. Everything is built.",
+            "remember": "The wording is built fresh every time, even when a "
+                       "tool has looked something up first.",
             "answers": [
                 {"text": "One of you made a typing mistake", "ok": False,
                  "why": "Not needed. Even a character-perfect repeat gives "

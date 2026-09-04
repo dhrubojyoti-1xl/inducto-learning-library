@@ -33,7 +33,7 @@ DECK = {
     ],
 
     "sections": [
-        ("Approved and unapproved", "The account decides", "s_approved"),
+        ("Approved and unapproved", "More than an account", "s_approved"),
         ("The settings that matter", "Two switches", "s_settings"),
         ("AI you did not notice", "Already inside your tools", "s_hidden"),
         ("Keeping a trail", "Answering the audit question", "s_trail"),
@@ -46,9 +46,12 @@ DECK = {
         {
             "anchor": "s_approved",
             "label": "Approved and unapproved",
-            "title": "The account decides everything",
-            "lead": "The same model can be safe or unsafe depending entirely "
-                    "on which account you signed in with.",
+            "title": "Approval is more than being logged in",
+            "lead": "The same model can be safe or unsafe depending on the "
+                    "account you signed in with — but the account alone does "
+                    "not make a use approved. The tool, the configuration "
+                    "and what you are using it for all have to be approved "
+                    "too.",
             "gloss": ["Approved tool"],
             "visual": {
                 "type": "split",
@@ -380,18 +383,20 @@ DECK = {
     "quiz": [
         {
             "q": "What makes a tool approved?",
-            "remember": "An agreement and an account, not the brand.",
+            "remember": "The tool, the account and the use case — not just "
+                       "the brand.",
             "answers": [
                 {"text": "It is a well-known brand", "ok": False,
                  "why": "Brand tells you nothing about the terms you are "
                         "using. The same well-known tool is safe on a company "
                         "account and unassessed on a personal free one."},
-                {"text": "The company has an agreement and you use your work "
-                         "account", "ok": True,
-                 "why": "Those two together give terms somebody has read, "
-                        "managed access, and a person who can answer questions "
-                        "about it afterwards. Without them, none of that "
-                        "exists."},
+                {"text": "The company has explicitly approved this tool, "
+                         "this account and this use", "ok": True,
+                 "why": "All three together give terms somebody has read, "
+                        "managed access, and a person who can answer "
+                        "questions afterwards. A work account on the "
+                        "company's general subscription does not by itself "
+                        "approve every tool or every use of it."},
                 {"text": "It has a privacy policy", "ok": False,
                  "why": "Every service has one, and almost nobody at this "
                         "company has read the one on a free consumer tier. A "
@@ -497,9 +502,9 @@ DECK = {
     "recap": {
         "title": "Safe AI use on one screen",
         "points": [
-            ("The account decides",
-             "The same model is safe on a work account and unassessed on a "
-             "personal one."),
+            ("Approval is more than an account",
+             "The tool, the configuration and the use case all need to be "
+             "approved too, not just the account."),
             ("Two settings worth finding",
              "Training on your data, and chat history. Turn both off where you "
              "can."),
@@ -539,8 +544,8 @@ DECK = {
     },
 
     "glossary": [
-        ("Approved tool", "An AI service the company holds an agreement with, "
-                          "used through your work account."),
+        ("Approved tool", "The tool, account and use the company has "
+                          "actually approved — not just any work login."),
         ("Consumer tier", "A free or personal subscription. Terms nobody here "
                           "negotiated, and often training on your input."),
         ("Training on your data", "Using what you type to improve the service. "

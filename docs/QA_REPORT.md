@@ -41,7 +41,7 @@ Produced by `python siteverify.py`. Every gate re-reads the shipped files; none 
 | Search index rows | 1162 |
 | Glossary terms | 148 |
 | Assessment question pool | 15 |
-| Source strings checked | 7125 |
+| Source strings checked | 7127 |
 | Source strings missing | 0 |
 | Progress stores (must be 1) | 1 |
 | `[COMPANY INPUT NEEDED]` tokens | 56 |

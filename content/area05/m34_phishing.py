@@ -113,19 +113,21 @@ DECK = {
         },
         {
             "label": "The four pressure signals",
-            "title": "Two together is enough to stop",
+            "title": "One is enough to make you check",
             "visual": {
                 "type": "iconrow",
                 "items": [
+                    {"icon": "shield", "label": "A change, on its own, "
+                     "is reason enough",
+                     "sub": "New bank details, a new process, a new address — "
+                            "verify that alone, even with no urgency and no "
+                            "pressure attached to it."},
                     {"icon": "clock", "label": "Urgency plus authority",
-                     "sub": "\"The director needs this paid before five.\" The "
-                            "classic combination, and it works."},
+                     "sub": "\"The director needs this paid before five.\" A "
+                            "common combination, and an easy one to notice."},
                     {"icon": "lock", "label": "Secrecy plus a change",
                      "sub": "\"Do not mention this yet — the new account is "
                             "confidential.\" Nothing legitimate needs both."},
-                    {"icon": "shield", "label": "Any two means verify",
-                     "sub": "Not \"look harder at the email\". Pick up a "
-                            "phone and use a number you already had."},
                 ],
             },
         },
@@ -410,7 +412,7 @@ DECK = {
         },
         {
             "q": "Which combination should stop you?",
-            "remember": "Any two pressure signals together.",
+            "remember": "Signals combine easily — but one alone is reason enough to check.",
             "answers": [
                 {"text": "Urgency and a request to keep it quiet", "ok": True,
                  "why": "Nothing legitimate needs both speed and secrecy. That "
@@ -438,7 +440,8 @@ DECK = {
                  "why": "They never need it. IT can reset access through their "
                         "own systems, and any request for a code from you is "
                         "somebody impersonating them."},
-                {"text": "Nobody, ever, under any circumstances", "ok": True,
+                {"text": "Nobody — not IT, your bank, or your manager",
+                 "ok": True,
                  "why": "The code exists to prove it is you. Anyone asking you "
                         "to read it out is asking you to prove you are them. "
                         "There is no legitimate version of that request."},
@@ -509,7 +512,7 @@ DECK = {
              "Perfect English, real logos, your order number. Spelling is not "
              "the test."),
             ("Four pressure signals",
-             "Urgency, authority, secrecy, a change. Any two means stop."),
+             "Urgency, authority, secrecy, a change. One alone is reason enough to verify."),
             ("Verify outside the channel",
              "A number you already had, not one from the message."),
             ("Never a one-time code",

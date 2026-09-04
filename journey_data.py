@@ -48,36 +48,83 @@ def load():
 # ASSESSMENT_POOL — 15 real questions, indices chosen to avoid any question
 # already shown as a lesson knowledge-check, balanced across all 8 areas.
 # ---------------------------------------------------------------------------
+# Domain groups the 15 questions into the required learning areas (a domain
+# can span more than one source module, e.g. "Security" covers SEC-01,
+# SEC-02 and SEC-04). Cognitive level and difficulty are judged from what the
+# question actually asks: RECALL/COMPREHENSION for a taught rule or its
+# consequence, APPLICATION for choosing correctly among realistic options,
+# ANALYSIS for a scenario needing judgement, not just a remembered fact.
 ASSESSMENT_SPEC = [
-    ("AI-01", 1, "AI Fundamentals"),
-    ("AI-02", 1, "Generative AI"),
-    ("AI-04", 1, "What AI Can and Cannot Do"),
-    ("AI-05", 2, "AI Hallucinations & Fact-Checking"),
-    ("AI-05", 3, "AI Hallucinations & Fact-Checking"),
-    ("PE-01", 2, "Basic Prompting"),
-    ("PE-02", 1, "Instructions, Context & Role"),
-    ("DW-01", 1, "Writing Email With AI"),
-    ("DW-10", 1, "Planning & Productivity With AI"),
-    ("PS-01", 1, "Business Communication"),
-    ("PS-04", 1, "Time Management"),
-    ("SEC-01", 1, "Password Security & Multi-Factor Authentication"),
-    ("SEC-02", 2, "Phishing & Social Engineering"),
-    ("SEC-04", 1, "Data Protection & Confidential Information"),
-    ("SEC-07", 2, "What Never to Paste Into AI"),
+    ("Q01", "AI-01", 1, "AI Fundamentals", "AI Understanding",
+     "Choose the task that fits what a generative assistant is actually "
+     "good at", "Application", "Medium"),
+    ("Q02", "AI-02", 1, "Generative AI", "AI Understanding",
+     "Recognise the kind of job a generator suits best", "Application",
+     "Medium"),
+    ("Q03", "AI-04", 1, "What AI Can and Cannot Do", "AI Understanding",
+     "Explain why a precise-looking AI number is a risk signal, not "
+     "reassurance", "Comprehension", "Medium"),
+    ("Q04", "AI-05", 2, "AI Hallucinations & Fact-Checking",
+     "AI Understanding", "Recall what the second step of the fact-check "
+     "process actually asks for", "Recall", "Easy"),
+    ("Q05", "AI-05", 3, "AI Hallucinations & Fact-Checking",
+     "AI Understanding", "Decide the correct next action on finding one "
+     "wrong figure in an AI answer", "Application", "Medium"),
+    ("Q06", "PE-01", 2, "Basic Prompting", "Prompting",
+     "Apply a prompting technique to get an exact, structured output",
+     "Application", "Medium"),
+    ("Q07", "PE-02", 1, "Instructions, Context & Role", "Prompting",
+     "Identify the consequence of omitting a key piece of context",
+     "Comprehension", "Easy"),
+    ("Q08", "DW-01", 1, "Writing Email With AI", "Workplace Application",
+     "Choose the tone instruction that actually produces the intended "
+     "result", "Application", "Medium"),
+    ("Q09", "DW-10", 1, "Planning & Productivity With AI",
+     "Workplace Application", "Recall the recommended planning horizon and "
+     "why it holds", "Recall", "Easy"),
+    ("Q10", "PS-01", 1, "Business Communication", "Professional Skills",
+     "Explain why a message should carry a single ask", "Comprehension",
+     "Easy"),
+    ("Q11", "PS-04", 1, "Time Management", "Professional Skills",
+     "Explain why deciding the day's task the night before works",
+     "Comprehension", "Easy"),
+    ("Q12", "SEC-01", 1, "Password Security & Multi-Factor Authentication",
+     "Security", "Evaluate real password examples and identify the "
+     "strongest", "Analysis", "Medium"),
+    ("Q13", "SEC-02", 2, "Phishing & Social Engineering", "Security",
+     "Recall the absolute rule on who may ever ask for a one-time code",
+     "Recall", "Easy"),
+    ("Q14", "SEC-04", 1, "Data Protection & Confidential Information",
+     "Security", "Identify which data-handling rule prevents the most "
+     "realistic harm", "Analysis", "Medium"),
+    ("Q15", "SEC-07", 2, "What Never to Paste Into AI", "Safe AI Use",
+     "Decide the correct incident-response action after a real mistake has "
+     "already happened", "Analysis", "High"),
 ]
 
 
 def assessment_pool(by_code):
     pool = []
-    for code, idx, area in ASSESSMENT_SPEC:
+    for qid, code, idx, area, domain, objective, level, diff in ASSESSMENT_SPEC:
         q = by_code[code]["quiz"][idx]
         pool.append({
-            "module": area, "source": code,
+            "id": qid, "module": area, "source": code, "domain": domain,
+            "objective": objective, "cognitive_level": level,
+            "difficulty": diff,
             "q": q["q"], "stem": q.get("stem"),
             "options": [{"text": a["text"], "ok": bool(a["ok"]), "why": a["why"]}
                         for a in q["answers"]],
         })
     return pool
+
+
+def assessment_domain_counts(by_code):
+    """Question count per required domain — computed, not asserted."""
+    pool = assessment_pool(by_code)
+    counts = {}
+    for q in pool:
+        counts[q["domain"]] = counts.get(q["domain"], 0) + 1
+    return counts
 
 
 # ---------------------------------------------------------------------------

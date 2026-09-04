@@ -194,8 +194,9 @@ DECK = {
                                              "laptop, a bad paste."),
                     ("You become aware", "The clock starts here, at this "
                                          "moment."),
-                    ("You report it", "Same day, to the named contact, with "
-                                      "what you know."),
+                    ("You report it", "Same day, through the company's "
+                                      "designated incident-reporting "
+                                      "process, with what you know."),
                     ("They assess and notify", "Within the statutory window, "
                                                "if it qualifies."),
                 ],

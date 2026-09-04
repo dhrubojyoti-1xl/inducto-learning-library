@@ -482,12 +482,12 @@ DECK = {
                         "why people reach for it. The problem is not the "
                         "output, it is that nobody can account for what went "
                         "in."},
-                {"text": "The company cannot see, control or delete what was "
-                         "shared", "ok": True,
-                 "why": "That is the real difference. A work account brings an "
-                        "agreement, a record, and somebody who can act when a "
-                        "mistake happens. A personal account brings none of "
-                        "that, and the trail ends at you."},
+                {"text": "It gives up the company's contractual, security "
+                         "and audit controls", "ok": True,
+                 "why": "That is the real difference. A work account brings "
+                        "an agreement, a record, and somebody who can act "
+                        "when a mistake happens. A personal account may "
+                        "provide none of that, and the trail ends at you."},
                 {"text": "It is slower", "ok": False,
                  "why": "Speed was never the issue. A personal account is "
                         "often quicker to open, which is precisely why this "
@@ -644,8 +644,8 @@ DECK = {
                      "must be reported."),
         ("Data breach", "Personal data going somewhere it should not. It does "
                         "not need a hacker — one paste is enough."),
-        ("Approved tool", "An AI service the company holds an agreement with, "
-                          "signed into using your work account."),
+        ("Approved tool", "The tool, account and use the company has "
+                          "actually approved — not just any work login."),
         ("Prompt", "Everything you type into an AI tool. It leaves your device "
                    "and is usually stored."),
     ],
