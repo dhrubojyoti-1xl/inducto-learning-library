@@ -599,23 +599,27 @@ def render_index(mods, totals):
               "Thirty-nine self-guided modules on AI, prompting, professional "
               "skills and data security.", "", "01-ai-general")]
     o.append('<body data-area="01-ai-general">\n')
-    o.append(topbar("", '<a class="btn btn--sm btn--quiet" href="#tracks">Modules</a>'
+    o.append(topbar("", '<a class="btn btn--sm btn--quiet" href="journey.html">'
+                        'Mandatory Journey</a>'
+                        '<a class="btn btn--sm btn--quiet" href="#optional">Optional '
+                        'library</a>'
                         '<a class="btn btn--sm" href="assessment.html">Assessment</a>'))
     o.append('<main id="main">\n')
 
     # hero
     o.append('<section class="hero"><div class="wrap hero__grid"><div>'
              "<h1>%s</h1>"
-             "<p>Thirty-nine short modules you can take in any order. Every one ends "
-             "with something you can use the same day.</p>"
+             "<p>Every employee completes the 16-stop Mandatory Journey — about "
+             "150 minutes. Go deeper any time in the %d-module Optional Extended "
+             "Library below.</p>"
              '<div class="chiprow" style="margin-top:20px">'
              '<span class="chip" style="color:#c9d1de;border-color:rgba(255,255,255,.25)">'
-             "%d modules</span>"
+             "16 mandatory stops</span>"
              '<span class="chip" style="color:#c9d1de;border-color:rgba(255,255,255,.25)">'
-             "%d hours</span>"
+             "%d-module library</span>"
              '<span class="chip" style="color:#c9d1de;border-color:rgba(255,255,255,.25)">'
              "5 tracks</span></div></div>"
-             % (LIB_NAME, totals["modules"], round(totals["minutes"] / 60)))
+             % (LIB_NAME, totals["modules"], totals["modules"]))
     o.append('<div class="hero__stats">'
              '<div class="stat"><span class="stat__n" id="statDone">0</span>'
              '<span class="stat__l">Completed</span></div>'
@@ -628,7 +632,9 @@ def render_index(mods, totals):
     o.append("</div></section>\n")
 
     o.append('<div class="wrap">\n')
-    o.append('<div class="resume" id="resume"></div>\n')
+    o.append('<div class="resume resume--journey" id="journeyResume" '
+             'style="margin-top:calc(var(--sp-6) * -1 - 8px)"></div>\n')
+    o.append('<div class="resume" id="resume" style="margin-top:16px"></div>\n')
     o.append('<div class="bar" id="overallBarWrap" role="progressbar" aria-valuemin="0" '
              'aria-valuemax="100" aria-valuenow="0" aria-label="Overall progress" '
              'style="margin-top:24px"><div class="bar__fill" id="overallBar" '
@@ -647,9 +653,17 @@ def render_index(mods, totals):
              'aria-live="polite" aria-label="Search results"></div>\n')
 
     # learning paths
-    o.append('<section style="margin-top:48px"><h2>Where to start</h2>'
-             '<p class="prose">If you would rather be told what to take first, '
-             "pick a path.</p><div class=\"grid grid--3\">")
+    o.append('<section style="margin-top:48px" id="optional">'
+             '<span class="chip">OPTIONAL · EXTENDED LIBRARY</span>'
+             '<h2 style="margin-top:10px">Suggested paths through the full '
+             "library</h2>"
+             '<p class="prose">The Mandatory Journey above is required. '
+             "Everything below is optional and is never required for "
+             "mandatory completion: 20 of these 39 modules go deeper on a "
+             "topic the journey already condensed, and 19 cover ground the "
+             "journey does not touch at all. If you would rather be told "
+             "what to take first, pick a path."
+             "</p><div class=\"grid grid--3\">")
     by_code = {m["code"]: m for m in mods}
     for p in PATHS:
         items = [by_code[c] for c in p["codes"] if c in by_code]

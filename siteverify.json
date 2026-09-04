@@ -1,7 +1,7 @@
 {
   "stats": {
-    "html_pages": 41,
-    "internal_links": 1133,
+    "html_pages": 59,
+    "internal_links": 1363,
     "modules": 39,
     "source_strings_checked": 7127,
     "source_strings_missing": 0,
@@ -9,13 +9,12 @@
     "videos_embedded": 39,
     "images_referenced": 18,
     "progress_stores": 1,
-    "company_input_tokens": 55,
+    "company_input_tokens": 56,
     "company_input_distinct": 14,
     "search_rows": 1162,
     "glossary_terms": 148,
-    "assessment_pool": 39,
-    "external_urls": 84,
-    "external_urls_checked": 84
+    "assessment_pool": 15,
+    "external_urls": 84
   },
   "fails": [],
   "warns": []

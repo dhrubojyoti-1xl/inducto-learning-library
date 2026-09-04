@@ -192,6 +192,51 @@
     setText('#glossCount', DATA.glossary.length);
   }
 
+  /* ---------- mandatory journey resume card ------------------------------ */
+  function paintJourneyResume() {
+    var box = $('#journeyResume');
+    if (!box || !DATA.journey) return;
+    box.setAttribute('data-area', '01-ai-general');
+    var stops = DATA.journey.stops;
+    var stopIds = stops.map(function (s) { return s.code; });
+    var o = P.overall(stopIds.concat(['M-19']));
+    var next = stops.filter(function (s) { return P.status(s.code) !== 'COMPLETED'; })[0];
+
+    if (!next) {
+      var exDone = P.exerciseGet().completedAt;
+      var a = P.assessment();
+      var label, heading, sub, href, cta;
+      if (a.passed) {
+        label = 'Journey complete'; heading = 'You have passed the final assessment';
+        sub = 'The Mandatory Journey is done.'; href = 'assessment.html'; cta = 'Review assessment';
+      } else if (!exDone) {
+        label = 'Almost there'; heading = 'All 16 stops complete — one step left';
+        sub = 'M-19 · Integration exercise'; href = 'journey/m19.html'; cta = 'Start the exercise';
+      } else {
+        label = 'Ready'; heading = 'Ready for the final assessment';
+        sub = '15 questions · 70% pass mark · 3 attempts'; href = 'assessment.html'; cta = 'Take the assessment';
+      }
+      box.innerHTML =
+        '<div class="resume__body"><div class="resume__label">' + label + '</div>' +
+        '<h2 style="margin:4px 0 6px;font-size:1.3rem">' + heading + '</h2>' +
+        '<p style="margin:0;color:var(--grey)">' + sub + '</p>' +
+        '<div class="bar bar--thin" style="max-width:340px;margin-top:10px">' +
+        '<div class="bar__fill" style="width:' + o.percent + '%"></div></div></div>' +
+        '<a class="btn" href="' + href + '">' + cta + ' →</a>';
+    } else {
+      var status = P.status(next.code);
+      box.innerHTML =
+        '<div class="resume__body"><div class="resume__label">MANDATORY · ' +
+        (status === 'NOT STARTED' ? 'Start here' : 'Continue') + '</div>' +
+        '<h2 style="margin:4px 0 6px;font-size:1.3rem">' + esc(next.code) + ' — ' + esc(next.title) + '</h2>' +
+        '<p style="margin:0;color:var(--grey)">' + esc(next.stage) + ' · ' + next.minutes + ' min · ' +
+        o.percent + '% of the journey complete</p>' +
+        '<div class="bar bar--thin" style="max-width:340px;margin-top:10px">' +
+        '<div class="bar__fill" style="width:' + o.percent + '%"></div></div></div>' +
+        '<a class="btn" href="' + esc(next.href) + '">' + (status === 'NOT STARTED' ? 'Start' : 'Continue') + ' →</a>';
+    }
+  }
+
   /* ---------- reset ------------------------------------------------------- */
   var reset = $('#resetBtn');
   if (reset) {
@@ -202,7 +247,7 @@
     });
   }
 
-  function paintAll() { paintOverall(); paintResume(); paintTracks(); }
+  function paintAll() { paintOverall(); paintResume(); paintTracks(); paintJourneyResume(); }
   paintAll();
   paintGlossary();
 

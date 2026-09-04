@@ -21,7 +21,8 @@
       lastModule: null,
       lastSection: null,
       modules: {},
-      assessment: { attempts: [], passed: false }
+      assessment: { attempts: [], passed: false },
+      exercise: { steps: {}, completedAt: null }
     };
   }
 
@@ -55,6 +56,7 @@
       if (!data || data.version !== 1) return blank();
       if (!data.modules) data.modules = {};
       if (!data.assessment) data.assessment = { attempts: [], passed: false };
+      if (!data.exercise) data.exercise = { steps: {}, completedAt: null };
       return data;
     } catch (e) { return blank(); }
   }
@@ -218,6 +220,22 @@
         issuedBy: null,     // ORGANISATION TO CONFIRM
         certificateId: null // issued by backend, not by this build
       };
+    },
+
+    /* ---- M-19 integration exercise: per-step drafts + completion ------- */
+    exerciseStep: function (stepId, text) {
+      var s = load();
+      s.exercise.steps[stepId] = { text: text || '',
+        at: new Date().toISOString() };
+      return save(s);
+    },
+
+    exerciseGet: function () { return load().exercise; },
+
+    exerciseComplete: function () {
+      var s = load();
+      s.exercise.completedAt = new Date().toISOString();
+      return save(s);
     },
 
     reset: function () {

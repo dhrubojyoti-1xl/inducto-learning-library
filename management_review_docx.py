@@ -205,9 +205,12 @@ def resolve_stop(stop, by_code):
     out["module_titles"] = [by_code[c]["title"] for c in stop["sources"]]
 
     # ---- video ----
+    # The real video record is always resolved (title/channel/duration/URL),
+    # even for a "note only" stop — video_note_only controls whether it is
+    # embedded and counted in the time budget, not whether the data exists,
+    # so the video can still be shown and linked to the Optional library.
     video_src = by_code[stop.get("video_source", stop["sources"][0])]
-    v = video_src.get("video")
-    out["video"] = v if stop.get("use_video") else None
+    out["video"] = video_src.get("video")
     out["video_note_only"] = stop.get("video_note_only", False)
     out["video_ref_module"] = video_src["module_code"]
 
