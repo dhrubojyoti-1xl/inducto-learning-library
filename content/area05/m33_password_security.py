@@ -393,22 +393,24 @@ DECK = {
             "remember": "Reused passwords from other breaches.",
             "answers": [
                 {"text": "Someone guesses the password", "ok": False,
-                 "why": "Almost never. Guessing is slow, usually blocked after "
-                        "a few attempts, and unnecessary when millions of real "
-                        "passwords are already available in leaked lists."},
+                 "why": "Guessing is slow, is usually blocked after a few "
+                        "failed attempts, and is unnecessary once millions of "
+                        "real passwords are already sitting in leaked lists."},
                 {"text": "A password leaked elsewhere is tried here", "ok": True,
-                 "why": "This is the standard attack. Your email and password "
-                        "from a breached site are tried automatically against "
+                 "why": "This is one of the most common ways accounts are "
+                        "actually taken. Your email and password from a "
+                        "breached site are tried automatically against "
                         "hundreds of services. If you reused it, one of them "
                         "works."},
                 {"text": "The password was too short", "ok": False,
-                 "why": "Length matters against guessing, which is rarely how "
-                        "it happens. A twenty-character password that leaked "
-                        "is just as usable to an attacker as a short one."},
+                 "why": "Length matters against guessing, which is not how "
+                        "most real takeovers happen. A twenty-character "
+                        "password that leaked is just as usable to an "
+                        "attacker as a short one."},
                 {"text": "Someone watched you type it", "ok": False,
-                 "why": "It happens, and it is a tiny fraction of cases. The "
-                        "overwhelming majority need nobody anywhere near your "
-                        "desk."},
+                 "why": "It happens, and it needs the attacker physically "
+                        "near you — a real limit that credential stuffing from "
+                        "a leaked list does not have."},
             ],
         },
         {
@@ -533,8 +535,8 @@ DECK = {
     "toolkit": {
         "title": "Take these three things with you",
         "templates": [
-            ("key", "The passphrase generator prompt",
-             "Eight four-word phrases, no names, no dates."),
+            ("key", "The generate-and-store habit",
+             "Your password manager's own generator — never an AI tool."),
             ("eye", "The breach check",
              "Type your address and see which leaks included it."),
             ("shield", "The exposure checklist",

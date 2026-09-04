@@ -48,9 +48,12 @@ DECK = {
             "anchor": "s_what",
             "label": "What a second factor is",
             "title": "Something you know, something you have",
-            "lead": "A password is something you know. It can be stolen "
-                    "without you noticing. A second factor is something you "
-                    "physically have.",
+            "lead": "Security people group proof of identity into three "
+                    "kinds: something you know (a password), something you "
+                    "have (your phone or a security key), and something you "
+                    "are (a fingerprint or your face). MFA means adding a "
+                    "second kind — in the systems you use day to day, "
+                    "usually something you have.",
             "visual": {
                 "type": "flow",
                 "steps": [
@@ -560,8 +563,9 @@ DECK = {
 
     "glossary": [
         ("Multi-factor authentication", "Proving who you are with two "
-                                        "different kinds of thing: something "
-                                        "you know and something you have."),
+                                        "different kinds of proof: "
+                                        "something you know, have or are — "
+                                        "not a password alone."),
         ("Authenticator app", "An app showing a rotating code, tied to the "
                               "device rather than to a phone number."),
         ("Passkey", "A modern factor tied to the real website address, so it "

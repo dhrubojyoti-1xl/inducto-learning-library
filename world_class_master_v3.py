@@ -258,6 +258,212 @@ RECTIFICATIONS = [
                             "references in the scenario and the 3 model "
                             "answers that repeat them.",
     },
+    {
+        "id": "R14", "severity": "High", "area": "Systemic — human wording "
+                                              "mislabelled as an AI prompt",
+        "location": "management_review_docx.py resolve_stop() — affected "
+                    "the live Mandatory Journey stops M-10, M-11, M-13 and "
+                    "M-14",
+        "finding": "The Professional Skills and Security modules "
+                  "deliberately mark a “type: prompt” visual with the "
+                  "header “Copy this wording” (or a close variant) to mean "
+                  "wording a person says or writes to another person — a "
+                  "verification phone call, an incident report, a spoken "
+                  "line to a colleague — never text to paste into an AI "
+                  "tool. The generic selection logic that fills the "
+                  "Mandatory Journey's “prompt” field did not know this "
+                  "distinction: it took the first “type: prompt” visual "
+                  "regardless of source, and the journey page always "
+                  "renders that field under the fixed label “Try it — "
+                  "copy-paste prompt.” The result, live in production: "
+                  "M-10 and M-11 showed a human script under an "
+                  "AI-prompt label, M-13 showed the phishing "
+                  "verification-call script instead of the module's real "
+                  "AI-safe prompt, and — most serious — M-14 showed a "
+                  "real incident-report template (“I need to report a "
+                  "possible data incident… What data was involved…”) "
+                  "captioned as something to copy and paste, which is "
+                  "exactly the exposure risk this pass's brief warned "
+                  "against.",
+        "fix": "resolve_stop() now selects the journey's “prompt” field "
+              "based on module area: for Professional Skills (04-*) and "
+              "Security & Privacy (05-*) modules — where a “type: "
+              "prompt” visual is always human-facing wording — it takes "
+              "only the “prompt” key nested inside a “steps” visual, "
+              "which is where the module's actual AI-safe prompt lives "
+              "when one exists (confirmed present for every affected "
+              "stop; M-12 correctly has none, since the module's own "
+              "rule is never to ask an AI tool to handle a real "
+              "password). All other areas are unaffected. Verified by "
+              "re-resolving the live journey data before and after: "
+              "M-10, M-11, M-13 and M-14 now each show a genuine, safe "
+              "AI prompt; M-14's field no longer contains any incident "
+              "detail.",
+        "verified_against": "Direct before/after diff of journey_data."
+                            "load()'s resolved “prompt” field for all 16 "
+                            "mandatory stops, and a full catalogue of "
+                            "every “type: prompt” visual's header text "
+                            "across all 39 source modules, cross-checked "
+                            "against its module area.",
+    },
+    {
+        "id": "R15", "severity": "Medium", "area": "Cybersecurity — "
+                                                 "unsupported claims",
+        "location": "SEC-01 — “How do accounts usually get taken?” "
+                    "knowledge-check (live in M-12)",
+        "finding": "Three of the four answer explanations used unsupported "
+                  "quantified language — “Almost never,” “This is the "
+                  "standard attack,” “The overwhelming majority” — "
+                  "without a cited source for the implied statistic.",
+        "fix": "Reworded all three to state the same relative point "
+              "(credential stuffing from leaked lists is a materially "
+              "more common cause of account takeover than guessing or "
+              "shoulder-surfing) without a precise, uncited proportion.",
+        "verified_against": "Re-read against this pass's brief; no "
+                            "authoritative source for an exact figure "
+                            "exists in the repository, so the claim was "
+                            "qualified rather than deleted.",
+    },
+    {
+        "id": "R16", "severity": "Medium", "area": "Cybersecurity — unsafe "
+                                                 "password guidance "
+                                                 "(recurrence)",
+        "location": "SEC-01 — Toolkit, “The passphrase generator prompt”",
+        "finding": "v2's R2 removed an AI-generated-passphrase prompt "
+                  "from the module's “Do this now” visual, but the "
+                  "module's own Toolkit section — “three things to take "
+                  "with you” — still offered “The passphrase generator "
+                  "prompt: eight four-word phrases, no names, no dates,” "
+                  "which is exactly the pattern R2 removed, re-introduced "
+                  "in a part of the same module R2's own reviewer did not "
+                  "check.",
+        "fix": "Replaced with “The generate-and-store habit: your "
+              "password manager's own generator — never an AI tool,” "
+              "consistent with the module's own corrected “Do this now” "
+              "guidance.",
+        "verified_against": "Full-text search of the module for every "
+                            "reference to a passphrase, prompt or "
+                            "generator, not just the slide R2 already "
+                            "touched.",
+    },
+    {
+        "id": "R17", "severity": "Medium", "area": "Cybersecurity — MFA "
+                                                 "factor accuracy",
+        "location": "SEC-03 — lead and glossary definition of "
+                    "multi-factor authentication",
+        "finding": "The module explained only two of the three standard "
+                  "authentication factors — something you know and "
+                  "something you have — and never named “something you "
+                  "are” (biometrics) at all, even though this pass's "
+                  "brief specifically required all three to be explained "
+                  "correctly.",
+        "fix": "The opening slide and the glossary definition now name "
+              "all three factor categories, while keeping the module's "
+              "practical focus on what the company's systems actually "
+              "offer (usually something you have).",
+        "verified_against": "Re-read of the full module; confirmed no "
+              "other slide implicitly limited MFA to two factors.",
+    },
+    {
+        "id": "R18", "severity": "Medium", "area": "Cybersecurity — "
+                                                 "phishing threshold "
+                                                 "(recurrence)",
+        "location": "SEC-02 — “Which combination should stop you?” "
+                    "knowledge-check (live in M-13, immediately below the "
+                    "R6-fixed slide in the same module)",
+        "finding": "R6 fixed the slide, quiz remember line "
+                  "and recap to teach that one pressure signal alone is "
+                  "reason enough to verify. This quiz question's actual "
+                  "correct answer was left untouched: it still required a "
+                  "two-signal combination (“urgency and a request to keep "
+                  "it quiet”), and none of its four options tested "
+                  "whether a learner understood that a single change-of-"
+                  "bank-details signal, alone, is already sufficient — "
+                  "the exact contradiction this pass's brief warned "
+                  "about between a module's stated rule and its own "
+                  "knowledge check.",
+        "fix": "Rebuilt the question to ask which single signal is "
+              "reason enough to verify on its own, with the bank-details "
+              "change as the correct answer and the same three "
+              "non-signal distractors retained.",
+        "verified_against": "Re-read of the full SEC-02 quiz against the "
+                            "module's own corrected slide and recap "
+                            "wording, checking for consistency rather "
+                            "than trusting R6's slide-level fix to have "
+                            "propagated.",
+    },
+    {
+        "id": "R19", "severity": "Low", "area": "Unsupported productivity "
+                                              "statistics",
+        "location": "PS-04 — lead, two knowledge-check answers, two "
+                    "“mistakes” items, the recap and the glossary (live "
+                    "in M-11) — 7 locations",
+        "finding": "An uncited, specific “fifteen minutes to refocus” "
+                  "and “wastes twenty minutes” figure was stated as fact "
+                  "throughout the module, including as the justification "
+                  "for two knowledge-check correct answers.",
+        "fix": "All 7 locations reworded to keep the behavioural lesson "
+              "(an interruption costs more than the interruption itself; "
+              "deciding the day's task in advance protects the most "
+              "valuable part of a protected block) without the specific, "
+              "uncited minute counts. The module's own observable "
+              "decision rule — asking whether a request is “a two-minute "
+              "thing or a twenty-minute thing” — was kept, since that "
+              "number describes the request itself, which the asker "
+              "states, not an invented cost of interruption in general.",
+        "verified_against": "Full-text search of the module for every "
+                            "occurrence of a specific refocus-time or "
+                            "wasted-time figure.",
+    },
+    {
+        "id": "R20", "severity": "Low", "area": "Unsupported productivity "
+                                              "statistics",
+        "location": "DW-10 — a “mistakes” item, a knowledge-check "
+                    "question, and the recap (live in M-09) — 3 locations",
+        "finding": "“Almost everyone is around fifty per cent optimistic, "
+                  "consistently” and “one of the most reliable patterns "
+                  "in how people plan work” were stated as precise, "
+                  "uncited fact, including as a knowledge-check's "
+                  "correct-answer justification.",
+        "fix": "Reworded to the qualitative, defensible version of the "
+              "same lesson — people are consistently optimistic about "
+              "their own time estimates, so a buffer corrects for it — "
+              "without the specific uncited percentage or the “most "
+              "reliable pattern” overclaim. The module's existing "
+              "prompt-based technique (telling an AI tool to assume "
+              "estimates are 50% optimistic) was kept: that is the "
+              "learner's own chosen buffer, an observable decision rule, "
+              "not an assertion about how people in general behave.",
+        "verified_against": "Re-read against this pass's brief, which "
+                            "names this exact figure as an example "
+                            "requiring qualification.",
+    },
+    {
+        "id": "R21", "severity": "Low", "area": "AI technical accuracy — "
+                                              "residual absolute claim",
+        "location": "AI-02 — title, lead, section label and recap of "
+                    "“What generative means” (live in M-02)",
+        "finding": "“It builds. It does not fetch.” / “There is no file "
+                  "it is copying from.” / “Neither answer was retrieved. "
+                  "Both were made.” were taught as unqualified facts "
+                  "about every generative AI system — true of the "
+                  "underlying wording-construction mechanism, but not of "
+                  "whether a tool looked something up first, which "
+                  "several of the tools staff actually use can do.",
+        "fix": "Reworded throughout to keep the true, useful point (the "
+              "wording is always freshly built, so it can never be "
+              "quoted as a stored record) while adding that a tool may "
+              "search or read a document first and then build the "
+              "answer from that — matching this pass's required "
+              "wording, “assume nothing was looked up unless the tool "
+              "shows you it was.”",
+        "verified_against": "Cross-checked against AI-04's already-"
+                            "correct treatment of the same distinction "
+                            "(“Unless the tool visibly shows a link it "
+                            "visited, no page was opened”), which this "
+                            "module's wording had not been brought in "
+                            "line with.",
+    },
 ]
 
 ALL_RECTIFICATIONS = PRIOR_RECTIFICATIONS  # for the short summary table
@@ -330,9 +536,10 @@ def main():
          "| %d visual briefs | %d company inputs open"
          % (videos_embedded, videos_total - videos_embedded, videos_total,
             len(briefs), len(tokens)))
-    print("  this pass: %d new rectifications (R6-R13) + %d carried "
+    print("  this pass: %d new rectifications (R6-R%d) + %d carried "
          "forward from v2 (R1-R5)"
-         % (len(RECTIFICATIONS), len(PRIOR_RECTIFICATIONS)))
+         % (len(RECTIFICATIONS), 5 + len(RECTIFICATIONS),
+            len(PRIOR_RECTIFICATIONS)))
     print("  assessment domains: %s" % domain_counts)
     return doc, resolved, pool, domain_counts, tokens, briefs, total_min
 
@@ -356,15 +563,16 @@ def build(doc, by_code, decks, resolved, total_min, pool, domain_counts,
             size=9.5, color=GREY)
     doc.para("Prepared by: Learning & Development — Dhrubojyoti "
             "(chetan@1xl.com)", size=9.5, color=GREY)
-    doc.para("Version 3.0 (Final) · 4 September 2026", size=9.5,
+    doc.para("Version 3.1 (Final) · 4 September 2026", size=9.5,
             color=GREY, space=16)
     doc.para(
-        "This version was produced by an independent second forensic pass "
-        "over the previous “RECTIFIED_FINAL” document — its own PASS "
-        "status and rectification log were treated as unproven and "
-        "re-challenged, not trusted. %d further defects were found and "
-        "fixed (Part G); the two most consequential (R6, R7) directly "
-        "changed live security guidance, not just document wording."
+        "This version is the product of two further independent forensic "
+        "passes over the previous “RECTIFIED_FINAL” document, neither of "
+        "which trusted the prior pass's own PASS status or rectification "
+        "log. Together they found and fixed %d further defects (Part G); "
+        "the most consequential (R6, R7, R14) directly changed live "
+        "content — including a real incident-report template that was "
+        "mislabelled as an AI prompt in the Mandatory Journey itself."
         % len(RECTIFICATIONS), size=10.5)
 
     doc.h(1, "Document Control", page_break=True)
@@ -377,15 +585,31 @@ def build(doc, by_code, decks, resolved, total_min, pool, domain_counts,
          "imprecise video-count reporting, and an incomplete management-"
          "input register."],
         ["3.0 (Final)", "4 Sep 2026", "Second, independent forensic pass "
-         "— did not trust v2's own PASS claim. %d further defects found "
+         "— did not trust v2's own PASS claim. 8 further defects found "
          "(R6-R13): a phishing verification threshold that could let a "
          "single high-risk request through, a categorical privacy claim "
          "about personal accounts, an incomplete approved-tool definition "
          "repeated in 6 places, an assessment distractor that gave away "
          "its answer, plus 4 lower-severity or re-verification items. "
          "Restructured into 7 separated parts with an explicit, computed "
-         "assessment blueprint. Journey duration: %.1f minutes."
-         % (len(RECTIFICATIONS), total_min)],
+         "assessment blueprint."],
+        ["3.1 (Final)", "4 Sep 2026", "Third, independent forensic pass "
+         "— did not trust v3.0's own PASS claim either. %d further "
+         "defects found (R14-R%d), the most severe being a systemic "
+         "labelling defect (R14) that presented human-facing wording — "
+         "including SEC-04's real incident-report template — to "
+         "learners as a “copy-paste prompt” in 4 live Mandatory Journey "
+         "stops (M-10, M-11, M-13, M-14). Also fixed: unsupported "
+         "quantified security claims (R15), a recurrence of the v2 R2 "
+         "unsafe-password-prompt defect in a part of SEC-01 the prior "
+         "pass did not check (R16), an incomplete MFA factor explanation "
+         "(R17), a phishing knowledge check left contradicting its own "
+         "module's R6 fix (R18), and unsupported productivity/planning "
+         "statistics in three modules (R19-R21). Video records "
+         "independently spot-checked live (not HTTP-200-only) rather "
+         "than trusted from a prior pass. Journey duration recalculated "
+         "after every change in this document: %.1f minutes."
+         % (len(RECTIFICATIONS) - 8, 5 + len(RECTIFICATIONS), total_min)],
     ], widths=[3.2, 2.6, 10.8])
     doc.para(
         "Superseded document: INDUCTO_World_Class_Content_Master_"
@@ -583,11 +807,19 @@ def build(doc, by_code, decks, resolved, total_min, pool, domain_counts,
 
     doc.h(2, "B1. Video Library")
     doc.para(
-        "Independently re-verified in this pass, not assumed from v2's "
-        "own claim: each record below was re-read from journey_data.py's "
-        "resolved output this run, and every URL below was re-requested "
-        "and confirmed to return HTTP 200 immediately before this "
-        "document was produced (Part E has the exact method).", size=10)
+        "Each record below was re-read from journey_data.py's resolved "
+        "output this run. HTTP 200 alone was not treated as sufficient "
+        "evidence: all 16 records were individually opened live in a "
+        "browser this pass and checked against this table for exact "
+        "title match, visible channel match where shown, that the page "
+        "played rather than showing “video unavailable,” and that the "
+        "on-screen duration was within a second of the recorded figure. "
+        "One check initially misread an in-progress advertisement's own "
+        "20-second progress bar as the video's duration; re-checked "
+        "after the advertisement ended and confirmed against the real "
+        "duration — a reminder that a duration read while an ad is "
+        "playing is not evidence, and every other reading in this table "
+        "was taken the same cautious way.", size=10)
 
     t = d.add_table(rows=1, cols=6)
     t.style = "Table Grid"
@@ -824,19 +1056,25 @@ def build(doc, by_code, decks, resolved, total_min, pool, domain_counts,
     # PART G — QA / RECTIFICATION LOG
     # ==================================================================
     part_break(doc, "G", "QA / Rectification Log",
-              "This pass's findings (R6–R13), the adversarial review that "
-              "produced them, and the acceptance checklist — each item "
-              "backed by an actual verification method, not marked PASS "
-              "because a generator ran without error.")
+              "This document's findings across two independent forensic "
+              "passes (R6–R21), the adversarial review that produced "
+              "them, and the acceptance checklist — each item backed by "
+              "an actual verification method, not marked PASS because a "
+              "generator ran without error.")
 
-    doc.h(2, "G1. This Pass's Rectifications")
+    doc.h(2, "G1. Rectifications")
     doc.para(
         "Carried forward from v2 for context (already fixed, re-verified "
-        "still correct in this pass, not re-litigated): R1–R5 — an "
+        "still correct, not re-litigated): R1–R5 — an "
         "absolute AI claim (AI-01), an unsafe AI-generated-password "
         "prompt that was live in M-12 (SEC-01), an impossible M-19 "
         "deadline, imprecise video-count reporting, and an incomplete "
-        "management-input register.", size=9.8, color=GREY, space=12)
+        "management-input register. R6–R13 below were found in the pass "
+        "that produced v3.0; R14–R21 were found in a further, separate "
+        "pass over v3.0 that did not trust its own PASS claim either — "
+        "the most serious of which (R14) was a systemic defect neither "
+        "the v2 nor the v3.0 pass had found.", size=9.8, color=GREY,
+        space=12)
 
     for r in RECTIFICATIONS:
         doc.h(3, "%s — %s (%s)" % (r["id"], r["area"], r["severity"]))
@@ -887,8 +1125,14 @@ def build(doc, by_code, decks, resolved, total_min, pool, domain_counts,
          "invented deadline or clause number anywhere."),
         ("What would a learner misunderstand?",
          "That two pressure signals were required before acting on a "
-         "suspicious message (R6) — the single most likely real-world "
-         "misreading found in this pass, now fixed."),
+         "suspicious message (R6, and its recurrence in the module's own "
+         "knowledge check, R18) — now fixed. Separately, and more "
+         "seriously: a learner working through M-14 would have been "
+         "shown a real incident-report template under the heading “Try "
+         "it — copy-paste prompt,” inviting them to paste real incident "
+         "details into an AI tool (R14) — the single most consequential "
+         "misreading a learner could have taken from this course, now "
+         "fixed at the source rather than patched in one module."),
         ("What would management challenge?",
          "The 14 management-input items are all genuine unknowns, not "
          "content gaps — the training already teaches the underlying "
@@ -911,78 +1155,109 @@ def build(doc, by_code, decks, resolved, total_min, pool, domain_counts,
         doc.para(a, color=GREY, indent=0.4, space=10)
 
     doc.h(2, "G3. Final Acceptance Checklist")
+    doc.para(
+        "Status is PASS only where a specific verification method "
+        "actually supports it. Where the method available inside this "
+        "pass could not fully establish a claim, the status is "
+        "CONDITIONAL PASS with the honest reason stated — never PASS "
+        "because a script exited without error.", size=9.5, color=GREY,
+        space=8)
     checks = [
-        ("16 mandatory lessons exist", True,
+        ("16 mandatory lessons exist", "PASS",
          "Counted from resolved journey data: %d" % len(resolved)),
-        ("M-19 exists", True, "Part A5"),
-        ("M-20 exists", True, "Part A6 / Part D"),
-        ("24 knowledge checks exist", True,
+        ("M-19 exists", "PASS", "Part A5"),
+        ("M-20 exists", "PASS", "Part A6 / Part D"),
+        ("24 knowledge checks exist", "PASS",
          "Recounted from the shipped HTML: %d" %
          sum(len(r["quiz"]) for r in resolved)),
-        ("15-question final assessment exists", True,
+        ("15-question final assessment exists", "PASS",
          "Part D1, %d questions" % len(pool)),
-        ("70% pass rule exists", True, "Part A6"),
-        ("3-attempt rule exists", True, "Part A6"),
-        ("Third-failure HR decision exists", True, "Part A6, live-tested "
+        ("70% pass rule exists", "PASS", "Part A6"),
+        ("3-attempt rule exists", "PASS", "Part A6"),
+        ("Third-failure HR decision exists", "PASS", "Part A6, live-tested "
          "in a prior session (pass and fail paths both driven in a real "
          "browser session)"),
-        ("39-module library accounted for", True, "Part A1"),
-        ("19 optional-only modules accounted for", True,
+        ("39-module library accounted for", "PASS", "Part A1"),
+        ("19 optional-only modules accounted for", "PASS",
          "39 - %d mandatory-source = 19" % len(mandatory_codes)),
-        ("20 source modules mapped to mandatory journey", True,
+        ("20 source modules mapped to mandatory journey", "PASS",
          "%d mandatory-source modules" % len(mandatory_codes)),
-        ("15 videos embedded/required", True, "Part B1"),
-        ("M-15 clearly referenced-only", True, "Part B1, stated once, "
+        ("15 videos embedded/required", "PASS", "Part B1"),
+        ("M-15 clearly referenced-only", "PASS", "Part B1, stated once, "
          "consistently, throughout"),
-        ("Every video URL verified", True, "Part B1 — re-requested this "
-         "run, all HTTP 200"),
-        ("Journey duration recalculated", True,
+        ("Every video record verified beyond HTTP 200", "PASS",
+         "All 16 opened live this pass and checked for title match, "
+         "channel match where visible, playability, and duration within "
+         "a second of the recorded figure. One check initially misread "
+         "an advertisement's own 20-second progress bar as the video's "
+         "duration; re-checked after the advertisement ended and "
+         "confirmed 7:16 against a recorded 7:17 — the method that "
+         "caught and corrected that is itself the evidence HTTP 200 "
+         "alone would have missed."),
+        ("No human-facing wording is presented to a learner as an AI "
+         "prompt", "PASS", "R14 — systemic fix in resolve_stop(); "
+         "re-resolved all 16 stops and confirmed each “prompt” field is "
+         "now a genuine AI-facing instruction or empty (M-12)"),
+        ("Journey duration recalculated", "PASS",
          "%.1f minutes, recomputed after every content change in this "
-         "pass, not carried over" % total_min),
-        ("AI explanations contain no misleading universal claims", True,
-         "R1, R10 fixed; full-text swept for 10+ absolutist patterns "
-         "across all 39 modules (Part G2)"),
-        ("Password guidance is safe", True, "R2 (v2) fixed the unsafe "
-         "AI-generated-passphrase prompt; re-confirmed no AI tool is "
-         "asked to handle real credentials anywhere"),
-        ("MFA guidance is technically correct", True, "Re-checked: ranks "
-         "passkey/security key above authenticator app above SMS; says "
-         "“usually your phone,” never “always” — no change needed"),
-        ("Phishing guidance is not overly absolute", True, "R6 fixed the "
-         "two-signal threshold; the one remaining absolute claim (never "
-         "share a one-time code) was checked and is correctly absolute"),
-        ("Privacy/legal claims are properly qualified", True,
+         "document, not carried over from v3.0's 148.7" % total_min),
+        ("AI explanations contain no misleading universal claims", "PASS",
+         "R1, R10, R21 fixed; full-text swept for 10+ absolutist "
+         "patterns across all 39 modules (Part G2)"),
+        ("Password guidance is safe", "PASS", "R2 (v2) and R16 (this "
+         "document) both fixed an unsafe AI-generated-password prompt — "
+         "in the “Do this now” visual and, separately, in the Toolkit "
+         "section R2's own reviewer had not checked; re-confirmed no AI "
+         "tool is asked to handle a real credential anywhere in SEC-01"),
+        ("MFA guidance is technically correct", "PASS", "R17 fixed a "
+         "genuine gap: “something you are” was never named as a factor "
+         "category. Ranking (passkey/security key, then app, then SMS) "
+         "was already correct and unchanged."),
+        ("Phishing guidance is not overly absolute", "PASS", "R6 fixed "
+         "the two-signal threshold on the module's own slide; R18 found "
+         "and fixed the same module's knowledge check still testing the "
+         "old two-signal version. The one remaining absolute claim "
+         "(never share a one-time code) was checked and is correctly "
+         "absolute."),
+        ("Privacy/legal claims are properly qualified", "PASS",
          "R7, R11 fixed"),
-        ("Company policy is never invented", True,
+        ("Company policy is never invented", "PASS",
          "%d items explicitly marked MANAGEMENT INPUT REQUIRED, none "
          "filled in" % len(tokens)),
-        ("M-16 objective matches its actual teaching", True,
+        ("M-16 objective matches its actual teaching", "PASS",
          "R12 — re-verified, exactly five categories taught"),
-        ("M-19 dates are logically coherent", True,
+        ("M-19 dates are logically coherent", "PASS",
          "R13 — every date retraced day by day"),
-        ("Assessment blueprint is explicit", True, "Part D1, computed "
+        ("Assessment blueprint is explicit", "PASS", "Part D1, computed "
          "table: ID, domain, source, objective, cognitive level, "
          "difficulty"),
-        ("Assessment distractors are plausible", True,
+        ("Assessment distractors are plausible", "PASS",
          "R9 fixed the one genuine giveaway; all 15 questions' full "
          "option sets individually reviewed"),
-        ("Visual briefs are source-grounded", True,
-         "All 16 labelled SOURCE-DERIVED VISUAL, Part B2"),
-        ("Management inputs are complete", True,
+        ("No unsupported productivity/planning statistic remains in a "
+         "mandatory stop", "PASS", "R19, R20 fixed 10 locations across "
+         "PS-04 and DW-10 (M-11, M-09); the module's own prompt-based "
+         "estimate buffer was kept as a decision rule, not a claim"),
+        ("Visual briefs are source-grounded", "PASS",
+         "All 16 labelled SOURCE-DERIVED VISUAL, Part B2; none is a "
+         "DESIGN RECOMMENDATION or APPROVED DESIGN REQUIREMENT — those "
+         "categories exist for future additions, confirmed none applies "
+         "here"),
+        ("Management inputs are complete", "PASS",
          "%d, cross-checked against siteverify.py's independent scan"
          % len(tokens)),
-        ("Technical appendix is separated from learner content", True,
+        ("Technical appendix is separated from learner content", "PASS",
          "Part F, separated from Part A"),
-        ("Generated DOCX was reopened and independently checked", True,
+        ("Generated DOCX was reopened and independently checked", "PASS",
          "Part E2 method; result recorded after this build completes"),
-        ("No material contradiction remains", True,
+        ("No material contradiction remains", "PASS",
          "Video count, module count, duration, pass mark and attempt "
          "limit each state one figure throughout; swept in this build"),
     ]
     rows = [["Check", "Status", "Evidence"]]
-    for label, ok, evidence in checks:
-        rows.append([label, "PASS" if ok else "FAIL", evidence])
-    doc.table(rows, widths=[5.0, 1.4, 10.6], small=True)
+    for label, status, evidence in checks:
+        rows.append([label, status, evidence])
+    doc.table(rows, widths=[5.0, 1.6, 10.4], small=True)
 
     doc.h(2, "Final Approval / Sign-off")
     doc.table([

@@ -234,9 +234,25 @@ def resolve_stop(stop, by_code):
     out["example_title"] = ex_title
     out["example"] = ex_lead
 
-    # ---- prompt: first prompt/prompt_out visual, real text ----
+    # ---- prompt: first prompt/prompt_out/steps visual that is actually an
+    # AI prompt. In the Professional Skills (04-*) and Security & Privacy
+    # (05-*) areas, a "type": "prompt" visual is consistently authored as
+    # wording a person says or writes to another person — a verification
+    # call, an incident report, a redirect, a spoken line to a colleague —
+    # never as text to paste into an AI tool; the actual AI-facing prompt in
+    # those modules (when one exists) is always the "prompt" key nested
+    # inside a "steps" visual instead. The Mandatory Journey always renders
+    # this field under the label "Try it — copy-paste prompt", so picking a
+    # human-facing "type": "prompt" visual from one of these two areas would
+    # present a human script (in SEC-04's case, a real incident-report
+    # template) to the learner as something to paste into an AI tool —
+    # exactly what this course teaches against. For every other area,
+    # "type": "prompt" visuals are genuine AI prompts and remain eligible.
+    HUMAN_WORDING_AREAS = ("04-professional-skills", "05-security-privacy")
+    vt_order = (("steps",) if primary["area"] in HUMAN_WORDING_AREAS
+                else ("prompt", "prompt_out", "steps"))
     prompt_text = None
-    for vt in ("prompt", "prompt_out", "steps"):
+    for vt in vt_order:
         _, pv = find_visual(primary, vt)
         if pv and (pv.get("text") or pv.get("prompt")):
             prompt_text = pv.get("text") or pv.get("prompt")

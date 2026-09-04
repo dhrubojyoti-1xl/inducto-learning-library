@@ -34,7 +34,8 @@ DECK = {
     ],
 
     "sections": [
-        ("What generative means", "It builds, it does not fetch", "s_gen"),
+        ("What generative means", "It builds — even when it looked "
+                                  "something up first", "s_gen"),
         ("What it can make", "Text, structure, shorter versions, options", "s_makes"),
         ("Why answers change", "The same question, two answers", "s_vary"),
         ("Search box or generator?", "Pick the right one first time", "s_pick"),
@@ -47,9 +48,12 @@ DECK = {
         {
             "anchor": "s_gen",
             "label": "What generative means",
-            "title": "It builds. It does not fetch.",
-            "lead": "There is no file it is copying from. Every sentence is "
-                    "assembled the moment you ask for it.",
+            "title": "It builds — even when a tool looked something up first",
+            "lead": "By default there is no file it is copying from — the "
+                    "wording is assembled the moment you ask for it. Some "
+                    "tools can search or read a document first and then "
+                    "build the answer from that; assume nothing was looked "
+                    "up unless the tool shows you it was.",
             "visual": {
                 "type": "flow",
                 "steps": [
@@ -78,8 +82,9 @@ DECK = {
                      "sub": "Never quote it. Always read it."},
                 ],
                 "note": "This is why two colleagues asking the same question "
-                        "get different wording. Neither answer was retrieved. "
-                        "Both were made.",
+                        "often get different wording: the wording itself is "
+                        "always built fresh, even on the occasions when a "
+                        "tool looked something up first.",
             },
         },
         {
@@ -269,8 +274,9 @@ DECK = {
                      "Invented meetings, bonuses and policies reach the team "
                      "with your name on them."),
                     ("Asking it to \"find\" something",
-                     "It does not search. It produces text that resembles a "
-                     "finding."),
+                     "Unless the tool clearly shows it searched, assume it "
+                     "built a plausible-looking answer instead of finding a "
+                     "real one."),
                     ("Trusting a precise-looking number",
                      "A figure quoted to one decimal place is the most "
                      "convincing kind of invention."),
@@ -511,8 +517,9 @@ DECK = {
     "recap": {
         "title": "Generative AI on one screen",
         "points": [
-            ("It builds, it does not fetch",
-             "Every answer is constructed fresh. There is no page behind it."),
+            ("It builds, even when it also looked something up",
+             "The wording is always constructed fresh — assume nothing was "
+             "looked up unless the tool shows you it was."),
             ("Different every time",
              "Two colleagues asking the same thing get two answers. Neither is "
              "the record."),

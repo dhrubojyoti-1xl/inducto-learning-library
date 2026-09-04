@@ -402,9 +402,10 @@ DECK = {
             "remember": "First line, with the deadline.",
             "answers": [
                 {"text": "At the end, after the reasoning", "ok": False,
-                 "why": "Almost nobody reaches the end of a work email. Your "
-                        "question sits below the point where the reader "
-                        "stopped, meaning to come back later."},
+                 "why": "Most people skim a work email rather than read it "
+                        "end to end. Your question sits below the point "
+                        "where the reader stopped, meaning to come back "
+                        "later."},
                 {"text": "In the first sentence, with the deadline", "ok": True,
                  "why": "The reader can decide in four seconds whether this "
                         "needs them, and can answer without reading anything "
@@ -428,9 +429,9 @@ DECK = {
                         "answer the easiest question and forget the rest, "
                         "which leaves you chasing."},
                 {"text": "People answer one and forget the others", "ok": True,
-                 "why": "Reliably. Three asks in one email produces one "
-                        "answer, and you cannot tell from the reply which of "
-                        "the other two were even read."},
+                 "why": "In practice, three asks in one email tend to "
+                        "produce one answer, and you cannot tell from the "
+                        "reply which of the other two were even read."},
                 {"text": "Long emails break spam filters", "ok": False,
                  "why": "Not a real consideration for internal mail. The "
                         "problem is entirely about how people actually read "

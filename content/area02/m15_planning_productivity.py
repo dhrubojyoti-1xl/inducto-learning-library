@@ -265,8 +265,8 @@ DECK = {
                      "You reread forty items every morning to find the four "
                      "that matter."),
                     ("Trusting your own time estimates",
-                     "Almost everyone is around fifty per cent optimistic, "
-                     "consistently."),
+                     "People are consistently optimistic about their own "
+                     "estimates. Build in a buffer."),
                     ("Letting a task sit unstarted for weeks",
                      "It is not hard, it is undefined. Ask for the first five "
                      "minutes."),
@@ -427,9 +427,11 @@ DECK = {
                         "respond by abandoning the plan rather than adjusting "
                         "it. Ninety minutes of scheduling, wasted."},
                 {"text": "About three days, then re-plan midweek", "ok": True,
-                 "why": "Three days is roughly how far ahead you can predict "
-                        "in most operational jobs. Re-planning on Wednesday "
-                        "takes five minutes and keeps the plan real."},
+                 "why": "Three days is short enough that today's information "
+                        "still holds, and long enough to sequence real work. "
+                        "Re-planning on Wednesday takes five minutes and "
+                        "keeps the plan matched to what has actually "
+                        "changed."},
                 {"text": "Just today", "ok": False,
                  "why": "Too short to protect anything with a lead time. You "
                         "will keep discovering on Thursday that something "
@@ -491,18 +493,20 @@ DECK = {
         },
         {
             "q": "Why assume estimates are optimistic?",
-            "remember": "Almost everyone is about half out.",
+            "remember": "People are consistently optimistic about their own "
+                        "estimates.",
             "answers": [
                 {"text": "To create slack for emergencies", "ok": False,
                  "why": "Slack is a good side effect, but the reason is "
                         "simpler: the original estimates were wrong, "
                         "consistently and in the same direction."},
-                {"text": "Because most people underestimate by roughly half",
-                 "ok": True,
-                 "why": "It is one of the most reliable patterns in how people "
-                        "plan work. Applying the correction gives you a day "
-                        "with three or four real tasks instead of nine "
-                        "imaginary ones."},
+                {"text": "Because people are consistently optimistic about "
+                         "their own time estimates", "ok": True,
+                 "why": "It is a well-documented pattern in how people plan "
+                        "their own work, not a personal failing. Building in "
+                        "a buffer corrects for it and gives you a day with "
+                        "a realistic number of tasks instead of an "
+                        "optimistic one."},
                 {"text": "To make the plan easier to achieve", "ok": False,
                  "why": "It is not about feeling successful. It is about the "
                         "plan matching what will actually happen, so you can "
@@ -524,9 +528,9 @@ DECK = {
              "last."),
             ("Plan three days",
              "Friday is fiction on Monday. Re-plan midweek in five minutes."),
-            ("Halve your estimates",
-             "Almost everyone is about fifty per cent optimistic, "
-             "consistently."),
+            ("Build in a buffer",
+             "People are consistently optimistic about their own "
+             "estimates — a buffer corrects for it."),
             ("Stuck means undefined",
              "Ask for the first five minutes and the information you are "
              "missing."),

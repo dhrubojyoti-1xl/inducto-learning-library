@@ -122,8 +122,8 @@ DECK = {
                      "sub": "\"I am heads-down until eleven, catch me after.\" "
                             "Most people simply adjust."},
                     {"icon": "check", "label": "Decide the night before",
-                     "sub": "Choosing what to work on inside the block wastes "
-                            "twenty minutes of it."},
+                     "sub": "Choosing what to work on inside the block eats "
+                            "into the freshest, most protected part of it."},
                 ],
             },
         },
@@ -131,8 +131,9 @@ DECK = {
             "anchor": "s_interrupt",
             "label": "Handling interruptions",
             "title": "Thirty seconds each",
-            "lead": "The cost of an interruption is not the two minutes. It is "
-                    "the fifteen it takes to get back to where you were.",
+            "lead": "The cost of an interruption is not the couple of minutes "
+                    "it takes to answer. It is the time it takes afterwards "
+                    "to get back to where you were.",
             "visual": {
                 "type": "prompt",
                 "header": "Copy this wording",
@@ -157,14 +158,16 @@ DECK = {
                 "bad_tag": "Every interruption taken",
                 "bad": [
                     "Eleven interruptions between nine and one.",
-                    "Each one costs two minutes plus fifteen to refocus.",
-                    "That is more than three hours, and it does not feel like "
-                    "it.",
+                    "Each one costs a couple of minutes to answer, plus real "
+                    "time afterwards to refocus.",
+                    "It adds up to far more of the morning than it feels "
+                    "like at the time.",
                 ],
                 "good_tag": "Batched to eleven",
                 "good": [
                     "Two dealt with instantly, nine held to eleven o'clock.",
-                    "Those nine take forty minutes together, once.",
+                    "Those nine become one short run of conversations, "
+                    "handled together, once.",
                     "The morning block survives, and nobody waited long.",
                 ],
                 "note": "Batching is not avoiding people. It is answering nine "
@@ -258,11 +261,12 @@ DECK = {
                      "You never feel free. Reactive work expands to fill "
                      "whatever you leave open."),
                     ("Protecting time but not notifications",
-                     "One chat notification costs fifteen minutes of "
-                     "refocusing, whatever your calendar says."),
+                     "One chat notification breaks the block just as "
+                     "effectively as an open door, whatever your calendar "
+                     "says."),
                     ("Choosing the task at the start of the block",
-                     "Twenty minutes of the two hours gone before anything "
-                     "moves."),
+                     "A meaningful part of the two hours gone before "
+                     "anything moves."),
                     ("Saying yes to everything to be helpful",
                      "You become reliable for small things and unreliable for "
                      "large ones."),
@@ -319,12 +323,12 @@ DECK = {
             {
                 "text": "Deal with it now — it is only a couple of minutes.",
                 "tone": "ok",
-                "headline": "Two minutes, plus fifteen to get back",
+                "headline": "Two minutes, plus real time to get back",
                 "consequence": "The question genuinely takes two minutes. "
                                "Returning to where you were in the analysis "
-                               "takes another fifteen. Four more colleagues "
-                               "arrive before eleven, and the block produces "
-                               "nothing.",
+                               "takes real time on top of that. Four more "
+                               "colleagues arrive before eleven, and the "
+                               "block produces nothing.",
                 "rule": "The cost of an interruption is the refocusing, not "
                         "the answer.",
             },
@@ -380,11 +384,12 @@ DECK = {
                  "why": "That is the visible part and much the smaller one. "
                         "The expensive part is getting back to where you were "
                         "in the work."},
-                {"text": "The two minutes plus about fifteen to refocus",
-                 "ok": True,
-                 "why": "This is why eleven small interruptions can consume a "
-                        "morning without anyone noticing where it went. The "
-                        "arithmetic is invisible until you do it."},
+                {"text": "The time to answer, plus the time it takes to get "
+                         "back to where you were", "ok": True,
+                 "why": "Getting back to where you were is real work, even "
+                        "though it is hard to put an exact number on. That is "
+                        "why a handful of small interruptions can consume a "
+                        "morning without anyone noticing where it went."},
                 {"text": "Nothing, if you were not concentrating", "ok": False,
                  "why": "If you were not concentrating, the block was already "
                         "lost. The cost applies precisely when the work "
@@ -402,12 +407,13 @@ DECK = {
                 {"text": "It helps you sleep better", "ok": False,
                  "why": "It might, and that is not the operational reason. The "
                         "reason is what happens at nine the next morning."},
-                {"text": "Choosing at the start wastes twenty minutes of it",
+                {"text": "Choosing at the start spends your freshest "
+                         "protected time on the decision, not the work",
                  "ok": True,
                  "why": "Deciding is real work, and doing it inside your two "
                         "protected hours spends the freshest part of them on "
-                        "something you could have settled in thirty seconds "
-                        "the evening before."},
+                        "something you could have settled the evening before, "
+                        "in far less time."},
                 {"text": "Your manager may change priorities overnight",
                  "ok": False,
                  "why": "Occasionally, and that is an argument for a quick "
@@ -497,7 +503,8 @@ DECK = {
             ("Two hours, defended",
              "Same time daily, in the calendar, notifications off, one task."),
             ("Decide the night before",
-             "Choosing inside the block spends its freshest twenty minutes."),
+             "Choosing inside the block spends its freshest, most protected "
+             "time on the decision instead of the work."),
             ("Size the interruption",
              "\"Two minutes or twenty?\" Batch the twenties to one point."),
             ("Trade, defer, redirect",
@@ -533,8 +540,9 @@ DECK = {
                           "any space you leave open."),
         ("Protected block", "Two hours booked in the calendar, with "
                             "notifications off and one task decided."),
-        ("Context switching", "Moving between tasks. Costs roughly fifteen "
-                              "minutes of refocusing each time."),
+        ("Context switching", "Moving between tasks. Costs real, hard-to-"
+                              "measure time refocusing each time, even when "
+                              "the interruption itself was brief."),
         ("Batching", "Holding several small requests and handling them "
                      "together at one point in the day."),
         ("The trade", "Offering a choice about what slips, rather than "

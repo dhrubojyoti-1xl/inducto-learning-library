@@ -411,20 +411,22 @@ DECK = {
             ],
         },
         {
-            "q": "Which combination should stop you?",
-            "remember": "Signals combine easily — but one alone is reason enough to check.",
+            "q": "Which of these is reason enough to verify, on its own?",
+            "remember": "A change to where money or data goes — no second signal needed.",
             "answers": [
-                {"text": "Urgency and a request to keep it quiet", "ok": True,
-                 "why": "Nothing legitimate needs both speed and secrecy. That "
-                        "pairing exists specifically to stop you checking with "
-                        "the colleague who would recognise it as false."},
+                {"text": "A request to change bank details or payment "
+                         "instructions", "ok": True,
+                 "why": "A change is reason enough by itself. It does not need "
+                        "urgency or secrecy attached to it — waiting for a "
+                        "second signal before verifying is exactly the gap "
+                        "this kind of attack is built to use."},
                 {"text": "A long email with an attachment", "ok": False,
                  "why": "Perfectly normal in most jobs. Length and attachments "
                         "are not signals in themselves."},
                 {"text": "An email arriving late in the day", "ok": False,
                  "why": "Timing alone is not a signal, although attacks do "
-                        "favour busy periods. It matters only alongside the "
-                        "actual pressure signals."},
+                        "favour busy periods. It matters only alongside an "
+                        "actual pressure signal such as a change."},
                 {"text": "A supplier you have not heard from recently",
                  "ok": False,
                  "why": "Common and usually innocent. What matters is whether "
@@ -534,7 +536,8 @@ DECK = {
             ("chat", "The verification call wording",
              "Confirms directly, on a number you already had."),
             ("list", "The four-signal check",
-             "Urgency, authority, secrecy, a change. Count them."),
+             "Urgency, authority, secrecy, a change. Any one alone is "
+             "reason enough."),
             ("shield", "The first-hour checklist",
              "Disconnect, change elsewhere, report within the hour."),
         ],
