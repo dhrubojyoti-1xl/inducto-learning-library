@@ -8,7 +8,7 @@
 
 | Measure | Value |
 | --- | ---: |
-| Source strings checked | 7127 |
+| Source strings checked | 7125 |
 | Source strings not found in the HTML | 0 |
 | Coverage | 100.0% |
 | Module pages | 39 |

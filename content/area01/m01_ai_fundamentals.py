@@ -55,9 +55,12 @@ DECK = {
             "anchor": "s_what",
             "label": "What AI actually is",
             "title": "It predicts the next word",
-            "lead": "An AI assistant does not look up an answer. It reads your "
-                    "words and works out what should come next, one small piece "
-                    "at a time, thousands of times a second.",
+            "lead": "By default, an AI assistant does not look up an answer. "
+                    "It reads your words and predicts what should come next, "
+                    "one small piece at a time, thousands of times a second. "
+                    "Some tools can search the web when enabled — but unless "
+                    "it shows a page it opened, treat the answer as "
+                    "generated, not looked up.",
             "gloss": ["Token", "Model"],
             "visual": {
                 "type": "flow",

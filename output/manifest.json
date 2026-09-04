@@ -1105,10 +1105,10 @@
       "content_points": {
         "teachable_slides": 14,
         "quiz_items": 5,
-        "copy_paste_templates": 1,
+        "copy_paste_templates": 0,
         "checklist_items": 19,
         "scenario_decisions": 1,
-        "total": 40
+        "total": 39
       },
       "external_links": [
         "https://www.youtube.com/watch?v=xUp5S0nBnfc",

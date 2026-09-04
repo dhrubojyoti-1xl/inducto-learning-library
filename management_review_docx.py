@@ -519,9 +519,12 @@ def build_document(doc, by_code, decks, resolved, total_min, mandatory_codes):
          % (total_min, total_min / 60)],
         ["Within management's 120–180 minute requirement",
          "Yes" if 120 <= total_min <= 180 else "NO — see warning"],
-        ["Videos used in the Mandatory Journey", "%d, all pre-existing and "
+        ["Videos in the Mandatory Journey", "%d embedded and required, 1 "
+         "referenced but too long to embed (Optional Library carries the "
+         "full version) — %d video records in total, all pre-existing and "
          "individually verified (Section 21)"
-         % sum(1 for r in resolved if r["video"])],
+         % (sum(1 for r in resolved if r["video"] and not r["video_note_only"]),
+            sum(1 for r in resolved if r["video"]))],
         ["Knowledge-check questions in the Mandatory Journey",
          "%d, quoted verbatim from the audited quiz bank"
          % sum(len(r["quiz"]) for r in resolved)],

@@ -610,7 +610,7 @@ def render_index(mods, totals):
     o.append('<section class="hero"><div class="wrap hero__grid"><div>'
              "<h1>%s</h1>"
              "<p>Every employee completes the 16-stop Mandatory Journey — about "
-             "150 minutes. Go deeper any time in the %d-module Optional Extended "
+             "148 minutes. Go deeper any time in the %d-module Optional Extended "
              "Library below.</p>"
              '<div class="chiprow" style="margin-top:20px">'
              '<span class="chip" style="color:#c9d1de;border-color:rgba(255,255,255,.25)">'

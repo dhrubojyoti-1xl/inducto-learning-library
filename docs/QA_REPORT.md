@@ -25,26 +25,26 @@ Produced by `python siteverify.py`. Every gate re-reads the shipped files; none 
 | G13 | Three-attempt assessment rule, and a single progress store | PASS |
 | G14 | Company-input tokens counted, nothing invented in their place | PASS |
 | G15 | Data file agrees with the pages; one correct answer per assessment question | PASS |
-| G16 | External URLs return HTTP 200 (run with `--urls`) | PASS |
+| G16 | External URLs return HTTP 200 (run with `--urls`) | not run in this pass |
 
 ## Measured
 
 | Measure | Value |
 | --- | ---: |
-| HTML pages | 41 |
+| HTML pages | 59 |
 | Module pages | 39 |
-| Internal links checked | 1133 |
+| Internal links checked | 1363 |
 | Distinct external URLs | 84 |
 | Images referenced | 18 |
 | Videos embedded | 39 |
 | Videos in the source content | 39 |
 | Search index rows | 1162 |
 | Glossary terms | 148 |
-| Assessment question pool | 39 |
-| Source strings checked | 7127 |
+| Assessment question pool | 15 |
+| Source strings checked | 7125 |
 | Source strings missing | 0 |
 | Progress stores (must be 1) | 1 |
-| `[COMPANY INPUT NEEDED]` tokens | 55 |
+| `[COMPANY INPUT NEEDED]` tokens | 56 |
 | Distinct company inputs required | 14 |
 
 ## Accessibility

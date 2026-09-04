@@ -101,7 +101,7 @@ EXERCISE = {
         "strong example; the exercise only teaches you something if you "
         "try it first."
     ),
-    "scenario_title": "Friday, 4:50pm — the Chakan site review",
+    "scenario_title": "Thursday, 4:50pm — the Chakan site review",
     "scenario": (
         "You run operations coordination for the Chakan distribution "
         "site. You have just come out of a 40-minute review call with the "
