@@ -1,0 +1,11 @@
+# Force binary handling — never let git's CRLF normalization touch these,
+# regardless of core.autocrlf on any machine that clones this repo.
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.xlsx binary
+*.zip binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
