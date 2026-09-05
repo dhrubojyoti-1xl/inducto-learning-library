@@ -596,8 +596,9 @@ DECK = {
             ("Names come out first",
              "Names, numbers and addresses before anything else. Those are "
              "what regulators count."),
-            ("The account decides accountability",
-             "Work account, under a company agreement, every single time."),
+            ("Approval is more than an account",
+             "The specific tool, account and use all need approval — "
+             "not just a work login."),
             ("You cannot recall a paste",
              "No delete button reaches every copy. Prevention is the only "
              "control you have."),

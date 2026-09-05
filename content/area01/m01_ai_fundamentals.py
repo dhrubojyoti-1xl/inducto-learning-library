@@ -639,9 +639,9 @@ DECK = {
     "recap": {
         "title": "AI Fundamentals on one screen",
         "points": [
-            ("It predicts, it does not look up",
-             "Every answer is built piece by piece from patterns in text, not "
-             "fetched from a database of facts."),
+            ("By default it predicts, it does not look up",
+             "Built from patterns in text. Some tools search first — "
+             "assume nothing was looked up unless shown otherwise."),
             ("Search finds pages, AI writes text",
              "Need something you can quote? Search. Need a draft, summary or "
              "rewrite? Assistant."),
